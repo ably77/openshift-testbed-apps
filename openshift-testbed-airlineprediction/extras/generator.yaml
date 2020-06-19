@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-streams-workload-generator
+spec:
+  selector:
+    matchLabels:
+      app: kafka-streams-workload-generator
+  replicas: 1 # tells deployment to run n number of pods matching the template
+  template:
+    metadata:
+      labels:
+        app: kafka-streams-workload-generator
+    spec:
+      containers:
+      - name: kafka-streams-workload-generator
+        image: ably77/airlineprediction-generator:v9
