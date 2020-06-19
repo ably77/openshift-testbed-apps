@@ -4,6 +4,7 @@ metadata:
   name: letsencrypt-live
   annotations:
     "acme.openshift.io/priority": "100"
+    "argocd.argoproj.io/sync-options": Validate=false
   labels:
     managed-by: "openshift-acme"
     type: "CertIssuer"
