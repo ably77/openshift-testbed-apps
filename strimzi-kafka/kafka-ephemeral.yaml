@@ -6,6 +6,13 @@ spec:
   kafka:
     version: 2.5.0
     replicas: 3
+    #resources:
+      #requests:
+        #memory: "2000Mi"
+        #cpu: "500m"
+      #limits:
+        #memory: "2500Mi"
+        #cpu: "600m"
     listeners:
       plain: {}
       tls: {}
@@ -118,16 +125,15 @@ spec:
           quantile: "0.$4"
   zookeeper:
     replicas: 3
-    readinessProbe:
-      initialDelaySeconds: 15
-      timeoutSeconds: 5
-    livenessProbe:
-      initialDelaySeconds: 15
-      timeoutSeconds: 5
+    #resources:
+      #requests:
+        #memory: "200Mi"
+        #cpu: "25m"
+      #limits:
+        #memory: "600Mi"
+        #cpu: "75m"
     storage:
-      type: persistent-claim
-      size: 100Gi
-      deleteClaim: false
+      type: ephemeral
     metrics:
       # Inspired by Zookeeper rules
       # https://github.com/prometheus/jmx_exporter/blob/master/example_configs/zookeeper.yaml
@@ -160,20 +166,16 @@ spec:
         labels:
           replicaId: "$2"
           memberType: "$3"
-      # standalone Zookeeper
-      - pattern: "org.apache.ZooKeeperService<name0=StandaloneServer_port(\\d+)><>(\\w+)"
-        type: GAUGE
-        name: "zookeeper_$2"
-      - pattern: "org.apache.ZooKeeperService<name0=StandaloneServer_port(\\d+), name1=InMemoryDataTree><>(\\w+)"
-        type: GAUGE
-        name: "zookeeper_$2"
-  zookeeper:
-    replicas: 3
-    storage:
-      type: ephemeral
   entityOperator:
     topicOperator: {}
     userOperator: {}
   kafkaExporter:
     topicRegex: ".*"
     groupRegex: ".*"
+    #resources:
+      #requests:
+        #memory: "128Mi"
+        #cpu: "50m"
+      #limits:
+        #memory: "256Mi"
+        #dcpu: "100m"
