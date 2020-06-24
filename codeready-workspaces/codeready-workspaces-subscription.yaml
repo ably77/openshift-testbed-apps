@@ -2,7 +2,7 @@ apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: codeready-workspaces
-  namespace: openshift-operators
+  namespace: codeready
 spec:
   channel: latest
   installPlanApproval: Automatic
