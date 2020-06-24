@@ -9,5 +9,4 @@ spec:
   name: strimzi-kafka-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  #startingCSV: strimzi-cluster-operator.v0.16.2
   startingCSV: strimzi-cluster-operator.v0.18.0

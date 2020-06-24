@@ -4,10 +4,11 @@ metadata:
   name: my-cluster
 spec:
   kafka:
-    version: 2.4.0
+    version: 2.5.0
     replicas: 3
     #resources:
       #requests:
+        #memory: "2000Mi"
         #cpu: "500m"
       #limits:
         #memory: "2500Mi"
@@ -15,50 +16,16 @@ spec:
     listeners:
       plain: {}
       tls: {}
-      external:
-        type: nodeport
-        tls: false
-    readinessProbe:
-      initialDelaySeconds: 15
-      timeoutSeconds: 5
-    livenessProbe:
-      initialDelaySeconds: 15
-      timeoutSeconds: 5
     config:
-      offsets.topic.replication.factor: 2
-      transaction.state.log.replication.factor: 2
+      offsets.topic.replication.factor: 3
+      transaction.state.log.replication.factor: 3
       transaction.state.log.min.isr: 2
-      log.message.format.version: "2.4"
+      log.message.format.version: "2.5"
       log.retention.minutes: 5
       log.retention.check.interval.ms: 200000
       log.segment.bytes: 80000000
     storage:
       type: ephemeral
-      #type: jbod
-      #volumes:
-      #- id: 0
-        #type: persistent-claim
-        #size: 100Gi
-        #deleteClaim: false
-    ## example for if you want to set rack topology - hostname=unique
-    #rack:
-      #topologyKey: "kubernetes.io/hostname"
-    ## for if you set up taints and labels for dedicated nodes see (https://strimzi.io/2018/07/30/running-kafka-on-dedicated-nodes.html)
-    #tolerations:
-      #- key: "dedicated"
-        #operator: "Equal"
-        #value: "Kafka"
-        #effect: "NoSchedule"
-    ## for if you set up taints and labels for dedicated nodes, set affinity to label
-    #affinity:
-      #nodeAffinity:
-        #requiredDuringSchedulingIgnoredDuringExecution:
-          #nodeSelectorTerms:
-          #- matchExpressions:
-            #- key: dedicated
-              #operator: In
-              #values:
-              #- Kafka
     metrics:
       # Inspired by config from Kafka 2.0.0 example rules:
       # https://github.com/prometheus/jmx_exporter/blob/master/example_configs/kafka-2_0_0.yml
@@ -165,19 +132,8 @@ spec:
       #limits:
         #memory: "600Mi"
         #cpu: "75m"
-    readinessProbe:
-      initialDelaySeconds: 15
-      timeoutSeconds: 5
-    livenessProbe:
-      initialDelaySeconds: 15
-      timeoutSeconds: 5
-    #rack:
-      #topologyKey: "kubernetes.io/hostname"
     storage:
       type: ephemeral
-      #type: persistent-claim
-      #size: 100Gi
-      #deleteClaim: false
     metrics:
       # Inspired by Zookeeper rules
       # https://github.com/prometheus/jmx_exporter/blob/master/example_configs/zookeeper.yaml
@@ -186,25 +142,30 @@ spec:
       # replicated Zookeeper
       - pattern: "org.apache.ZooKeeperService<name0=ReplicatedServer_id(\\d+)><>(\\w+)"
         name: "zookeeper_$2"
+        type: GAUGE
       - pattern: "org.apache.ZooKeeperService<name0=ReplicatedServer_id(\\d+), name1=replica.(\\d+)><>(\\w+)"
         name: "zookeeper_$3"
+        type: GAUGE
         labels:
           replicaId: "$2"
+      - pattern: "org.apache.ZooKeeperService<name0=ReplicatedServer_id(\\d+), name1=replica.(\\d+), name2=(\\w+)><>(Packets\\w+)"
+        name: "zookeeper_$4"
+        type: COUNTER
+        labels:
+          replicaId: "$2"
+          memberType: "$3"
       - pattern: "org.apache.ZooKeeperService<name0=ReplicatedServer_id(\\d+), name1=replica.(\\d+), name2=(\\w+)><>(\\w+)"
         name: "zookeeper_$4"
+        type: GAUGE
         labels:
           replicaId: "$2"
           memberType: "$3"
       - pattern: "org.apache.ZooKeeperService<name0=ReplicatedServer_id(\\d+), name1=replica.(\\d+), name2=(\\w+), name3=(\\w+)><>(\\w+)"
         name: "zookeeper_$4_$5"
+        type: GAUGE
         labels:
           replicaId: "$2"
           memberType: "$3"
-      # standalone Zookeeper
-      - pattern: "org.apache.ZooKeeperService<name0=StandaloneServer_port(\\d+)><>(\\w+)"
-        name: "zookeeper_$2"
-      - pattern: "org.apache.ZooKeeperService<name0=StandaloneServer_port(\\d+), name1=(InMemoryDataTree)><>(\\w+)"
-        name: "zookeeper_$2_$3"
   entityOperator:
     topicOperator: {}
     userOperator: {}
