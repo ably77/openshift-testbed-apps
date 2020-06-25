@@ -21,11 +21,9 @@ metadata:
 ---
 apiVersion: v1
 data:
-  # example cloud deployment domain
-  # "websocketHost": "http://iot-consumer-iotdemo.apps-ly-demo.west.aws.redhat-demo.com",
   config.json: |-
     {
-        "websocketHost": "http://iot-consumer-iotdemo.apps-crc.testing",
+        "websocketHost": "http://iot-consumer-iotdemo.apps.ly-demo.west.aws.redhat-demo.com",
         "websocketPath": "/api/service-web/socket",
         "SERVER_TIMEOUT": 20000
     }
