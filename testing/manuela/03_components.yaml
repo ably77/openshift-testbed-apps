@@ -512,7 +512,7 @@ spec:
   console:
     expose: true
   deploymentPlan:
-    image: registry.redhat.io/amq7/amq-broker:7.5
+    image: registry.redhat.io/amq7/amq-broker:7.7
     journalType: nio
     messageMigration: false
     persistenceEnabled: false
