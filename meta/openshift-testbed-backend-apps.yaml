@@ -10,10 +10,9 @@ spec:
   source:
     repoURL: https://github.com/ably77/openshift-testbed-apps
     targetRevision: HEAD
-    path: codeready-workspaces/cr
+    path: argo-apps/backend
   destination:
     server: https://kubernetes.default.svc
-    namespace: codeready
   syncPolicy:
     automated:
       prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
