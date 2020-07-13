@@ -4,7 +4,7 @@ metadata:
   name: openshift-pipelines-operator
   namespace: openshift-operators
   annotations:
-    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/sync-wave: "0"
 spec:
   channel: dev-preview
