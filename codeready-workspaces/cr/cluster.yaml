@@ -19,7 +19,7 @@ spec:
     chePostgresPassword: ''
     #chePostgresDb: ''
   auth:
-    openShiftoAuth: false
+    openShiftoAuth: true
     identityProviderImage: ''
     externalIdentityProvider: false
     #identityProviderURL: ''
