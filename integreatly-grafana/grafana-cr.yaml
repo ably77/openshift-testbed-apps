@@ -3,8 +3,7 @@ kind: Grafana
 metadata:
   name: example-grafana
   annotations:
-    argocd.argoproj.io/hook: Skip
-    #argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/hook: PostSync
 spec:
   #resources:
     #requests:
