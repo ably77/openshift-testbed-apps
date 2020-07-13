@@ -5,7 +5,7 @@ metadata:
   namespace: grafana
   annotations:
     argocd.argoproj.io/hook: Skip
-    argocd.argoproj.io/sync-wave: "0"
+    #argocd.argoproj.io/sync-wave: "0"
 spec:
   channel: alpha
   installPlanApproval: Automatic
