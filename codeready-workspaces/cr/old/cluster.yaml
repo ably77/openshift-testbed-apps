@@ -27,7 +27,7 @@ spec:
     identityProviderPassword: admin
     identityProviderPostgresPassword: rquJDwo2fKBp
     identityProviderRealm: codeready
-    openShiftoAuth: true
+    openShiftoAuth: false
     updateAdminPassword: false
   storage:
     pvcStrategy: per-workspace

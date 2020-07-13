@@ -3,6 +3,10 @@ kind: CheCluster
 metadata:
   name: codeready-workspaces
   namespace: codeready
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    #argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    #argocd.argoproj.io/sync-wave: "3"
 spec:
   server:
     cheImageTag: ''
@@ -10,7 +14,7 @@ spec:
     devfileRegistryImage: ''
     pluginRegistryImage: ''
     tlsSupport: false
-    selfSignedCert: false
+    selfSignedCert: true
   database:
     externalDb: false
     chePostgresHostName: ''
@@ -19,7 +23,7 @@ spec:
     chePostgresPassword: ''
     chePostgresDb: ''
   auth:
-    openShiftoAuth: true
+    openShiftoAuth: false
     identityProviderImage: ''
     externalIdentityProvider: false
     identityProviderURL: ''

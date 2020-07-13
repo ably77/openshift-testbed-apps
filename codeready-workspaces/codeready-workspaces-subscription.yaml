@@ -3,6 +3,10 @@ kind: Subscription
 metadata:
   name: codeready-workspaces
   namespace: codeready
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    #argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    #argocd.argoproj.io/sync-wave: "2"
 spec:
   channel: latest
   installPlanApproval: Automatic
