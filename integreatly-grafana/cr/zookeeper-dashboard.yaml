@@ -4,6 +4,9 @@ metadata:
   name: zookeeper-dashboard
   labels:
     app: grafana
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   name: zookeeper-dashboard.json
   json: >

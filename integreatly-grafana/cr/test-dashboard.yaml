@@ -4,6 +4,9 @@ metadata:
   name: grafana-dashboard-from-url
   labels:
     app: grafana
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   name: grafana-dashboard-from-url.json
   url: https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/master/examples/metrics/grafana-dashboards/strimzi-kafka.json
