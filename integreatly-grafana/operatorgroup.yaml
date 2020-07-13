@@ -4,8 +4,8 @@ metadata:
   name: grafana
   namespace: grafana
   annotations:
-    #argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   targetNamespaces:
   - grafana
