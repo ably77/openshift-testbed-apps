@@ -3,7 +3,7 @@ kind: Grafana
 metadata:
   name: example-grafana
   annotations:
-    argocd.argoproj.io/sync-options: Validate=false
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   #resources:
     #requests:
