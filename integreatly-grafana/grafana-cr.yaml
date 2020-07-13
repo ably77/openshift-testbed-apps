@@ -3,8 +3,7 @@ kind: Grafana
 metadata:
   name: example-grafana
   annotations:
-    #argocd.argoproj.io/hook: Skip
-    argocd.argoproj.io/sync-wave: "10"
+    argocd.argoproj.io/sync-options: Validate=false
 spec:
   #resources:
     #requests:
