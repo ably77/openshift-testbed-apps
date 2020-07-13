@@ -4,7 +4,7 @@ metadata:
   name: grafana-operator
   namespace: grafana
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook: Skip
     argocd.argoproj.io/sync-wave: "0"
 spec:
   channel: alpha
