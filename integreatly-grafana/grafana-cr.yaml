@@ -3,7 +3,7 @@ kind: Grafana
 metadata:
   name: example-grafana
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook: Skip
     #argocd.argoproj.io/sync-wave: "0"
 spec:
   #resources:
