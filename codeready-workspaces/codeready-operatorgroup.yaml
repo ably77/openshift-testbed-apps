@@ -4,7 +4,7 @@ metadata:
   name: codeready
   namespace: codeready
   annotations:
-    argocd.argoproj.io/hook: Sync
+    #argocd.argoproj.io/hook: Sync
     #argocd.argoproj.io/hook-delete-policy: HookSucceeded
     #argocd.argoproj.io/sync-wave: "1"
 spec:
