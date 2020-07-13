@@ -2,33 +2,29 @@ apiVersion: org.eclipse.che/v1
 kind: CheCluster
 metadata:
   name: codeready-workspaces
-  annotations:
-    argocd.argoproj.io/sync-options: Validate=false
+  namespace: codeready
 spec:
   server:
-    cheDebug: 'false'
+    cheImageTag: ''
     cheFlavor: codeready
-    cheLogLevel: INFO
-    externalDevfileRegistry: false
-    externalPluginRegistry: false
-    selfSignedCert: false
+    devfileRegistryImage: ''
+    pluginRegistryImage: ''
     tlsSupport: false
+    selfSignedCert: false
   database:
-    chePostgresDb: dbche
-    chePostgresHostName: postgres
-    chePostgresPassword: admin
-    chePostgresPort: '5432'
-    chePostgresUser: pgche
     externalDb: false
+    chePostgresHostName: ''
+    chePostgresPort: ''
+    chePostgresUser: ''
+    chePostgresPassword: ''
+    chePostgresDb: ''
   auth:
+    openShiftoAuth: true
+    identityProviderImage: ''
     externalIdentityProvider: false
-    identityProviderAdminUserName: admin
-    identityProviderClientId: codeready-public
-    identityProviderPassword: admin
-    identityProviderPostgresPassword: rquJDwo2fKBp
-    identityProviderRealm: codeready
-    openShiftoAuth: false
-    updateAdminPassword: false
+    identityProviderURL: ''
+    identityProviderRealm: ''
+    identityProviderClientId: ''
   storage:
     pvcStrategy: per-workspace
     pvcClaimSize: 1Gi
