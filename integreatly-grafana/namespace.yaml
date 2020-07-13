@@ -3,5 +3,5 @@ kind: Namespace
 metadata:
   name: grafana
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    #argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "0"
