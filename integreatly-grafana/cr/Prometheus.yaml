@@ -2,9 +2,6 @@ apiVersion: integreatly.org/v1alpha1
 kind: GrafanaDataSource
 metadata:
   name: prometheus-datasource
-  annotations:
-    argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/sync-wave: "0"
 spec:
   name: prometheus-datasource.yaml
   datasources:

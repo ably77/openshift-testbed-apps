@@ -2,8 +2,6 @@ apiVersion: org.eclipse.che/v1
 kind: CheCluster
 metadata:
   name: codeready-workspaces
-  annotations:
-    argocd.argoproj.io/sync-options: Validate=false
 spec:
   server:
     cheDebug: 'false'

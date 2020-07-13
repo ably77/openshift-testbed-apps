@@ -2,9 +2,6 @@ apiVersion: podium.com/v1alpha1
 kind: Podium
 metadata:
   name: mypodium
-  annotations:
-    argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/sync-wave: "0"
 spec:
   jvb_node_port: 30000
   lets_encrypt: true

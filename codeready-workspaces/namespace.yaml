@@ -2,6 +2,3 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: codeready
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "0"
