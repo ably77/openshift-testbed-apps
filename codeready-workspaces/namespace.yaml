@@ -5,4 +5,4 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PreSync
     #argocd.argoproj.io/hook-delete-policy: HookSucceeded
-    #argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "0"
