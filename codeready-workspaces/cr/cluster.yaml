@@ -15,18 +15,18 @@ spec:
     selfSignedCert: true
   database:
     externalDb: false
-    chePostgresHostName: ''
-    chePostgresPort: ''
+    #chePostgresHostName: ''
+    #chePostgresPort: ''
     chePostgresUser: ''
     chePostgresPassword: ''
-    chePostgresDb: ''
+    #chePostgresDb: ''
   auth:
     openShiftoAuth: false
     identityProviderImage: ''
     externalIdentityProvider: false
-    identityProviderURL: ''
-    identityProviderRealm: ''
-    identityProviderClientId: ''
+    #identityProviderURL: ''
+    #identityProviderRealm: ''
+    #identityProviderClientId: ''
   storage:
     pvcStrategy: per-workspace
     pvcClaimSize: 1Gi
