@@ -3,8 +3,6 @@ kind: CheCluster
 metadata:
   name: codeready-workspaces
   namespace: codeready
-  annotations:
-    argocd.argoproj.io/sync-options: Validate=false
 spec:
   server:
     cheImageTag: ''
