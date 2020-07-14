@@ -4,6 +4,7 @@ metadata:
   name: consumer-app
   labels:
     app: iot-demo
+  argocd.argoproj.io/hook: PostSync
 spec:
   replicas: 1
   selector:

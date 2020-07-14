@@ -5,6 +5,8 @@ metadata:
   labels:
     app: iot-demo
     strimzi.io/cluster: my-cluster
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
   partitions: 1
   replicas: 3

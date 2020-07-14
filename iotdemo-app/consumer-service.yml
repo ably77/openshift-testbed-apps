@@ -5,6 +5,8 @@ metadata:
     app: iot-demo
     name: consumer-app
   name: consumer-app
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
   ports:
   - name: http
