@@ -6,13 +6,6 @@ spec:
   kafka:
     version: 2.5.0
     replicas: 1
-    #resources:
-      #requests:
-        #memory: "2000Mi"
-        #cpu: "500m"
-      #limits:
-        #memory: "2500Mi"
-        #cpu: "600m"
     listeners:
       plain: {}
       tls: {}
@@ -27,13 +20,9 @@ spec:
     storage:
       type: ephemeral
   zookeeper:
-    replicas: 1
-    #resources:
-      #requests:
-        #memory: "200Mi"
-        #cpu: "25m"
-      #limits:
-        #memory: "600Mi"
-        #cpu: "75m"
+    replicas: 3
     storage:
       type: ephemeral
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
