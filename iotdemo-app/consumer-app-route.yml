@@ -9,7 +9,6 @@ metadata:
   annotations:
     openshift.io/host.generated: "true"
     argocd.argoproj.io/hook: PreSync
-  creationTimestamp: null
 spec:
   port:
     targetPort: http
