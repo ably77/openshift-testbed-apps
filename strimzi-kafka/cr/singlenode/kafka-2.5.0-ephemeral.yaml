@@ -17,9 +17,9 @@ spec:
       plain: {}
       tls: {}
     config:
-      offsets.topic.replication.factor: 3
-      transaction.state.log.replication.factor: 3
-      transaction.state.log.min.isr: 2
+      offsets.topic.replication.factor: 1
+      transaction.state.log.replication.factor: 1
+      transaction.state.log.min.isr: 1
       log.message.format.version: "2.5"
       log.retention.minutes: 5
       log.retention.check.interval.ms: 200000
