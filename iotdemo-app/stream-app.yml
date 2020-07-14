@@ -4,6 +4,8 @@ metadata:
   name: stream-app
   labels:
     app: iot-demo
+  annotations:
+    argocd.argoproj.io/hook: Sync
 spec:
   replicas: 2
   selector:
