@@ -4,7 +4,8 @@ metadata:
   name: device-app
   labels:
     app: iot-demo
-  argocd.argoproj.io/hook: Sync
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
   replicas: 1
   selector:
