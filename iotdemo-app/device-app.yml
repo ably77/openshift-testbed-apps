@@ -7,7 +7,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PreSync
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: iot-demo
