@@ -14,9 +14,7 @@ spec:
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  generateName: manuela-quickstart-messaging-
-  generation: 1
-  #name: iotdemo-9sjbt
+  name: manuela-quickstart-messaging
   namespace: manuela-quickstart-messaging
 spec:
   targetNamespaces:
