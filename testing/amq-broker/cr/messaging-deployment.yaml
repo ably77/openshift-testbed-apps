@@ -19,7 +19,7 @@ spec:
         deploymentconfig: messaging
     spec:
       containers:
-      - image: quay.io/manuela/iot-consumer
+      - image: quay.io/manuela/iot-consumer:quickstart
         #imagePullPolicy: Always
         name: messaging
         ports:
