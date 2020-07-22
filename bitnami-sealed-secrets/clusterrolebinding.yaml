@@ -12,4 +12,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: sealed-secrets-controller
-  namespace: sealed-secrets
+  namespace: openshift-secrets

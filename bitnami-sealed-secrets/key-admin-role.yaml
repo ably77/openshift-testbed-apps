@@ -5,7 +5,7 @@ metadata:
   labels:
     name: sealed-secrets-key-admin
   name: sealed-secrets-key-admin
-  namespace: sealed-secrets
+  namespace: openshift-secrets
 rules:
 - apiGroups:
   - ""
