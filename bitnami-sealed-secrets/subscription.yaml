@@ -5,8 +5,6 @@ metadata:
   namespace: sealed-secrets
 spec:
   channel: alpha
-  installPlanApproval: Automatic
   name: sealed-secrets-operator-helm
-  source: community-operators
+  source: sealed-secrets-catalog
   sourceNamespace: openshift-marketplace
-  startingCSV: sealed-secrets-operator-helm.v0.0.2
