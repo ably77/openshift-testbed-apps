@@ -5,7 +5,7 @@ metadata:
   labels:
     name: sealed-secrets-service-proxier
   name: sealed-secrets-service-proxier
-  namespace: openshift-secrets
+  namespace: sealed-secrets
 rules:
 - apiGroups:
   - ""
