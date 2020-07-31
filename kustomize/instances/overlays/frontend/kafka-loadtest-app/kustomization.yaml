@@ -2,10 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # namespace to deploy all Resources to
-namespace: iotdemo-app
+namespace: kafka-loadtest-app
 
 bases:
-- ../../../templates/app/iotdemo-app/base
+- ../../../../templates/app/kafka-loadtest-app/base
 
 resources:
 - namespace.yaml

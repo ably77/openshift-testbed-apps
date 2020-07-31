@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-consumer1
+  labels:
+    app: kafka-consumer1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-consumer1
+  template:
+    metadata:
+      labels:
+        app: kafka-consumer1
+    spec:
+      containers:
+      - name: kafka-consumer1
+        image: strimzi/kafka:0.12.1-kafka-2.2.1
+        imagePullPolicy: Always
+        #resources:
+          #requests:
+            #memory: "512Mi"
+            #cpu: "250m"
+          #limits:
+            #memory: "1024Mi"
+            #cpu: "500m"
+        args: ["bin/kafka-console-consumer.sh", "--bootstrap-server", "my-cluster-kafka-bootstrap.myproject:9092", "--topic", "my-topic1", "--from-beginning"]
+      restartPolicy: Always
