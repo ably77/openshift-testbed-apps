@@ -1,2 +1,0 @@
-# openshift-testbed-argo-kafka
- 

@@ -1,8 +1,0 @@
-apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  name: codeready
-  namespace: codeready
-spec:
-  targetNamespaces:
-  - codeready

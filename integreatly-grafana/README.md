@@ -1,2 +1,0 @@
-# strimzi-demo-grafana
- 
