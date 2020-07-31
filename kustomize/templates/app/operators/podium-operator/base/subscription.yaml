@@ -9,4 +9,4 @@ spec:
   name: podium-operator-bundle
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: podium-operator.v1.0.5
+  startingCSV: podium-operator.v1.0.6
