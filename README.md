@@ -13,3 +13,8 @@ Since kustomize doesn't use templating it's very easy to follow and understand w
 ## Where can I learn more about Kustomize?
 I personally have found the official documentation on kustomize to be very helpful to understand
 (https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/)
+
+### Define App Folder Structure
+- Dev - Elevated security/permissions
+- Test - Restricted security/permissions
+- Prod - Fully controlled by pipeline process
