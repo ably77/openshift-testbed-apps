@@ -1,0 +1,5 @@
+{
+    "websocketHost": "http://messaging-manuela-quickstart-messaging.apps.ly-demo.west.aws.redhat-demo.com",
+    "websocketPath": "/api/service-web/socket",
+    "SERVER_TIMEOUT": 20000
+}
