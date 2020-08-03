@@ -1,0 +1,10 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: cron-producer1
+spec:
+  concurrencyPolicy: Allow
+  jobTemplate:
+    spec:
+      parallelism: 0
+      completions: 0
