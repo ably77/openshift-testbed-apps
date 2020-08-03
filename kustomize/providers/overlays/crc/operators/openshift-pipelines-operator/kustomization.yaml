@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: openshift-operators
 
 bases:
-- ../../../../templates/app/operators/openshift-pipelines-operator/base
+- ../../../../../templates/app/operators/openshift-pipelines-operator/base
