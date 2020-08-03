@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: myproject-crc
+  namespace: myproject-crc
+spec:
+  targetNamespaces:
+  - myproject-crc
