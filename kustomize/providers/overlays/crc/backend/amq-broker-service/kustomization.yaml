@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: manuela-quickstart-messaging
 
 bases:
-- ../../../../templates/app/backend/amq-broker-service/base
+- ../../../../../templates/app/backend/amq-broker-service/base
