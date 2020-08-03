@@ -5,10 +5,13 @@ kind: Kustomization
 namespace: iotdemo-app
 
 bases:
-- ../../../../templates/app/frontend/iotdemo-app/base
+- ../../../../../templates/app/frontend/iotdemo-app/base
 
 resources:
 - namespace.yaml
 
 patchesStrategicMerge:
 - patches/device-replicas.yaml
+- patches/consumer-bootstrap.yml
+- patches/device-bootstrap.yml
+- patches/stream-bootstrap.yml
