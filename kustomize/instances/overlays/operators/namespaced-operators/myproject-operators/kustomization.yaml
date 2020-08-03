@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # namespace to deploy all Resources to
-namespace: myproject
+namespace: myproject-dev
 
 bases:
-- ../../../../templates/app/operators/strimzi-kafka-operator/base
-- ../../../../templates/app/operators/prometheus-operator/base
+- ../../../../../templates/app/operators/strimzi-kafka-operator/base
+- ../../../../../templates/app/operators/prometheus-operator/base
 
 resources:
 - myproject-operatorgroup.yaml

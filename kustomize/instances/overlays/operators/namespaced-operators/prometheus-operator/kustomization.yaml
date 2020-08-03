@@ -2,10 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # namespace to deploy all Resources to
-namespace: podium
+namespace: myproject
 
 bases:
-- ../../../../templates/app/operators/podium-operator/base
-
-resources:
-- podium-namespace.yaml
+- ../../../../../templates/app/operators/prometheus-operator/base
