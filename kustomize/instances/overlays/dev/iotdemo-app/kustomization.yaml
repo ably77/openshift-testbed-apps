@@ -5,13 +5,16 @@ kind: Kustomization
 namespace: iotdemo-app
 
 bases:
-- ../../../../templates/app/frontend/iotdemo-app/base
+- ../../../../templates/app/frontend/iotdemo-app/dashboard/base
+- ../../../../templates/app/frontend/iotdemo-app/device-sensor/base
+- ../../../../templates/app/frontend/iotdemo-app/stream/base
+- ../../../../templates/app/frontend/iotdemo-app/kafka-topics/base
 
 resources:
 - namespace.yaml
 
 patchesStrategicMerge:
 - patches/device-replicas.yaml
-- patches/consumer-bootstrap.yml
-- patches/device-bootstrap.yml
-- patches/stream-bootstrap.yml
+- patches/consumer-bootstrap.yaml
+- patches/device-bootstrap.yaml
+- patches/stream-bootstrap.yaml
