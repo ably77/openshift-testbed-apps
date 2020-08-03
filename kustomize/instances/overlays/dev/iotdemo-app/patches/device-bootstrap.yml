@@ -9,4 +9,4 @@ spec:
         - name: device-app
           env:
             - name: BOOTSTRAP_SERVERS
-              value: "my-cluster-kafka-bootstrap.myproject-crc:9092"
+              value: "my-cluster-kafka-bootstrap.myproject-dev:9092"

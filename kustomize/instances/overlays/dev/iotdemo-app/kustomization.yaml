@@ -12,3 +12,6 @@ resources:
 
 patchesStrategicMerge:
 - patches/device-replicas.yaml
+- patches/consumer-bootstrap.yml
+- patches/device-bootstrap.yml
+- patches/stream-bootstrap.yml
