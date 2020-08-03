@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-consumer2
+spec:
+  template:
+    spec:
+      containers:
+      - name: kafka-consumer2
+        args: ["bin/kafka-console-consumer.sh", "--bootstrap-server", "my-cluster-kafka-bootstrap.myproject-dev:9092", "--topic", "my-topic2", "--from-beginning"]
