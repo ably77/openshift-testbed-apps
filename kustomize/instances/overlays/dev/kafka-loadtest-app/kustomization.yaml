@@ -14,5 +14,3 @@ patchesStrategicMerge:
 - patches/cronjob-bootstrap.yaml
 - patches/mytopic1-consumer-bootstrap.yaml
 - patches/mytopic2-consumer-bootstrap.yaml
-- patches/job1-completions.yaml
-- patches/job1-bootstrap.yaml
