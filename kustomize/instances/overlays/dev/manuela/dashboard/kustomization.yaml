@@ -13,10 +13,10 @@ resources:
 bases:
 - github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/machine-sensor
 
-images:
-- name: line-dashboard
-  newName: quay.io/manuela/iot-frontend
-  newTag: quickstart
+#images:
+#- name: line-dashboard
+#  newName: quay.io/manuela/iot-frontend
+#  newTag: quickstart
 
 #configMapGenerator:
 #- name: line-dashboard-configmap
