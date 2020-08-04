@@ -5,14 +5,13 @@ namespace: manuela-quickstart-line-dashboard
 
 resources:
 - line-dashboard-namespace.yaml
+- line-dashboard-route.yaml
 
 patchesStrategicMerge:
-#- patches/line-dashboard-route.yaml
-#- patches/line-dashboard-deployment.yaml
+- patches/line-dashboard-route.yaml
+- patches/line-dashboard-deployment.yaml
 
 bases:
-#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/machine-sensor
-#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift-prod/machine-sensor
 - github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/line-dashboard
 
 images:
