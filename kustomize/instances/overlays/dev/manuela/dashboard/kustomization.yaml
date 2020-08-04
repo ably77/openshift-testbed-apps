@@ -11,8 +11,9 @@ patchesStrategicMerge:
 - patches/line-dashboard-deployment.yaml
 
 bases:
-- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/machine-sensor
-- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/machine-sensor
+#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/machine-sensor
+- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift-prod/machine-sensor
+#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/machine-sensor
 
 images:
 - name: line-dashboard
