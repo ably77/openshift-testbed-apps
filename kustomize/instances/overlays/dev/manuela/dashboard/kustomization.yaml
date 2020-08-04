@@ -18,8 +18,8 @@ images:
   newName: quay.io/manuela/iot-frontend
   newTag: quickstart
 
-configMapGenerator:
-- name: line-dashboard-configmap
-  behavior: replace
-  files:
-  - config.json=line-dashboard-configmap-config.json
+#configMapGenerator:
+#- name: line-dashboard-configmap
+#  behavior: replace
+#  files:
+#  - config.json=line-dashboard-configmap-config.json
