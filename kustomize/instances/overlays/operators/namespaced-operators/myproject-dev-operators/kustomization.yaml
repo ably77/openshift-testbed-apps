@@ -11,3 +11,6 @@ bases:
 resources:
 - myproject-operatorgroup.yaml
 - myproject-namespace.yaml
+
+patchesStrategicMerge:
+- patches/myproject-dev-clusterrolebinding.yaml
