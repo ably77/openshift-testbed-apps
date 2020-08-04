@@ -10,7 +10,7 @@ patchesStrategicMerge:
 - patches/line-dashboard-deployment.yaml
 
 bases:
-- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/line-dashboard
+- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/line-dashboard
 
 images:
 - name: line-dashboard
