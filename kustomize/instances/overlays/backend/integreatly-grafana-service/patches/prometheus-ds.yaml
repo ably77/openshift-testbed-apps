@@ -6,4 +6,10 @@ spec:
   datasources:
     - name: Prometheus
       type: prometheus
+      access: proxy
       url: http://prometheus.myproject-dev:9090
+      isDefault: true
+      editable: true
+      jsonData:
+        tlsSkipVerify: true
+        timeInterval: "5s"

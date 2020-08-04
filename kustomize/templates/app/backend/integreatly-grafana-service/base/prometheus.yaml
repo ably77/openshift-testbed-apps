@@ -10,7 +10,6 @@ spec:
       access: proxy
       url: http://prometheus.prometheus:9090
       isDefault: true
-      version: 1
       editable: true
       jsonData:
         tlsSkipVerify: true
