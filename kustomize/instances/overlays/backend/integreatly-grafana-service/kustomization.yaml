@@ -6,3 +6,6 @@ namespace: grafana
 
 bases:
 - ../../../../templates/app/backend/integreatly-grafana-service/base
+
+patchesStrategicMerge:
+- patches/prometheus-url-patch.yaml
