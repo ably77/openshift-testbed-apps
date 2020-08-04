@@ -3,5 +3,7 @@ kind: Route
 metadata:
   name: line-dashboard
 spec:
-  #host: line-dashboard-manuela-quickstart-line-dashboard.apps.ly-demo.west.aws.redhat-demo.com
-  host: line-dashboard-manuela-quickstart-line-dashboard.apps.ly-demo.azureocp.com
+  # aws
+  host: line-dashboard-manuela-quickstart-line-dashboard.apps.ly-demo.west.aws.redhat-demo.com
+  # azure
+  #host: line-dashboard-manuela-quickstart-line-dashboard.apps.ly-demo.azureocp.com
