@@ -7,13 +7,13 @@ resources:
 - line-dashboard-namespace.yaml
 
 patchesStrategicMerge:
-- patches/line-dashboard-route.yaml
-- patches/line-dashboard-deployment.yaml
+#- patches/line-dashboard-route.yaml
+#- patches/line-dashboard-deployment.yaml
 
 bases:
-#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/machine-sensor
-- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift-prod/machine-sensor
-#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/machine-sensor
+- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift/line-dashboard
+#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela-openshift-prod/line-dashboard
+#- github.com/sa-mw-dach/manuela-gitops/config/templates/manuela/line-dashboard
 
 images:
 - name: line-dashboard
