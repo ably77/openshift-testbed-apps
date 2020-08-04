@@ -2,7 +2,6 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: cron-producer2
-  generation: 1
 spec:
   schedule: '*/2 * * * *'
   concurrencyPolicy: Allow

@@ -2,7 +2,6 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: cron-producer1
-  generation: 1
 spec:
   # once every two minutes
   #schedule: '*/1 * * * *'
