@@ -1,0 +1,38 @@
+metadata:
+  name: openshift-testbed-devspace
+projects:
+  - name: openshift-testbed
+    source:
+      location: 'https://github.com/ably77/openshift-testbed'
+      type: git
+      branch: master
+  - name: openshift-testbed-apps
+    source:
+      location: 'https://github.com/ably77/openshift-testbed-apps'
+      type: git
+      branch: master
+components:
+  - id: ms-vscode/go/latest
+    memoryLimit: 1024Mi
+    type: chePlugin
+    alias: go-plugin
+  - mountSources: true
+    endpoints:
+      - name: 8080/tcp
+        port: 8080
+    memoryLimit: 512Mi
+    type: dockerimage
+    alias: go-cli
+    image: 'registry.redhat.io/codeready-workspaces/stacks-golang-rhel8:2.0'
+    env:
+      - value: '/go:$(CHE_PROJECTS_ROOT)'
+        name: GOPATH
+      - value: /tmp/.cache
+        name: GOCACHE
+  - id: ms-kubernetes-tools/vscode-kubernetes-tools/latest
+    type: chePlugin
+  - id: redhat/vscode-openshift-connector/latest
+    type: chePlugin
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
+apiVersion: 1.0.0

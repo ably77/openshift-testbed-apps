@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: myproject-dev
 
 bases:
-- ../../../../../templates/app/operators/prometheus-operator/base
+- ../../../../instances/overlays/operators/prometheus-operator/base

@@ -1,0 +1,5 @@
+{
+    "websocketHost": "http://messaging-manuela-quickstart-messaging.apps.ly-demo.azureocp.com",
+    "websocketPath": "/api/service-web/socket",
+    "SERVER_TIMEOUT": 20000
+}

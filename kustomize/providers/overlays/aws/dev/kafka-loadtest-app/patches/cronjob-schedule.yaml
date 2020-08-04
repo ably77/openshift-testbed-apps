@@ -1,0 +1,9 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: cron-producer1
+spec:
+  # once every two minutes
+  schedule: '*/1 * * * *'
+  # once a week at 00:00 on Sunday
+  #schedule: '*/30 * * * *'

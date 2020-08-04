@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: device-app
+          env:
+            - name: BOOTSTRAP_SERVERS
+              value: "my-cluster-kafka-bootstrap.myproject-dev:9092"
