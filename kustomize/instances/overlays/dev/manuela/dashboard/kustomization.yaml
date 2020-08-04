@@ -23,4 +23,4 @@ configMapGenerator:
 - name: line-dashboard-configmap
   behavior: replace
   files:
-  - config.json=line-dashboard-configmap-config.json
+  - config.json=configmaps/line-dashboard-configmap-config.json

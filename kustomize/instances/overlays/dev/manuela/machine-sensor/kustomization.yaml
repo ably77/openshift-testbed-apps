@@ -16,11 +16,11 @@ configMapGenerator:
 - name: machine-sensor-1
   behavior: merge
   envs:
-  - machine-sensor-1-configmap.properties
+  - configmaps/machine-sensor-1-configmap.properties
 - name: machine-sensor-2
   behavior: merge
   envs:
-  - machine-sensor-2-configmap.properties
+  - configmaps/machine-sensor-2-configmap.properties
 
 
 images:
