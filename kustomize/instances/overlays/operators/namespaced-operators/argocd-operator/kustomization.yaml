@@ -1,0 +1,11 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases: 
+- ../../../../../templates/app/operators/argocd-operator/base
+
+# list of Resource Config to be Applied
+resources:
+- argocd-cluster.yaml
+- main-project.yaml
