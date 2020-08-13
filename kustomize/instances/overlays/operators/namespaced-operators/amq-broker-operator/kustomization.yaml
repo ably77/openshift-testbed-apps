@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: manuela-quickstart-messaging
 
 bases:
-- ../../../../../templates/app/operators/amq-broker-operator/base
+- ../../../../../manifests/app/operators/amq-broker-operator/base
 
 resources:
 - manuela-namespace.yaml

@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: myproject-dev
 
 bases:
-- ../../../../templates/app/backend/strimzi-kafka-service/base
+- ../../../../manifests/app/backend/strimzi-kafka-service/base

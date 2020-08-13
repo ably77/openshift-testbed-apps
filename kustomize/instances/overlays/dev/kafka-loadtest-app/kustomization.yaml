@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: kafka-loadtest-app
 
 bases:
-- ../../../../templates/app/frontend/kafka-loadtest-app/base
+- ../../../../manifests/app/frontend/kafka-loadtest-app/base
 
 resources:
 - namespace.yaml

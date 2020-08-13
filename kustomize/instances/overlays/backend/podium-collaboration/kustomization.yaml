@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: podium
 
 bases:
-- ../../../../templates/app/backend/podium-collaboration/base
+- ../../../../manifests/app/backend/podium-collaboration/base

@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: openshift-pipelines
 
 bases:
-- ../../../../templates/app/backend/openshift-pipelines-service/base
+- ../../../../manifests/app/backend/openshift-pipelines-service/base

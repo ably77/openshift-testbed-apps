@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: grafana
 
 bases:
-- ../../../../templates/app/backend/integreatly-grafana-service/base
+- ../../../../manifests/app/backend/integreatly-grafana-service/base
 
 patchesStrategicMerge:
 - patches/prometheus-ds.yaml

@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: grafana
 
 bases:
-- ../../../../templates/app/backend/letsencrypt-service/base
+- ../../../../manifests/app/backend/letsencrypt-service/base
 
 resources:
 - acme-namespace.yaml

@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: podium
 
 bases:
-- ../../../../../templates/app/operators/podium-operator/base
+- ../../../../../manifests/app/operators/podium-operator/base
 
 resources:
 - podium-namespace.yaml

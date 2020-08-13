@@ -5,10 +5,10 @@ kind: Kustomization
 namespace: iotdemo-app
 
 bases:
-- ../../../../templates/app/frontend/iotdemo-app/dashboard/base
-- ../../../../templates/app/frontend/iotdemo-app/device-sensor/base
-- ../../../../templates/app/frontend/iotdemo-app/stream/base
-- ../../../../templates/app/frontend/iotdemo-app/kafka-topics/base
+- ../../../../manifests/app/frontend/iotdemo-app/dashboard/base
+- ../../../../manifests/app/frontend/iotdemo-app/device-sensor/base
+- ../../../../manifests/app/frontend/iotdemo-app/stream/base
+- ../../../../manifests/app/frontend/iotdemo-app/kafka-topics/base
 
 resources:
 - namespace.yaml

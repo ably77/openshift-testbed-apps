@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: grafana
 
 bases:
-- ../../../../../templates/app/operators/integreatly-grafana-operator/base
+- ../../../../../manifests/app/operators/integreatly-grafana-operator/base
 
 resources:
 - namespace.yaml

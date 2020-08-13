@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: codeready
 
 bases:
-- ../../../../../templates/app/operators/codeready-workspaces-operator/base
+- ../../../../../manifests/app/operators/codeready-workspaces-operator/base
 
 resources:
 - codeready-namespace.yaml

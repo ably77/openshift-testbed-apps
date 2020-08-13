@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: myproject
 
 bases:
-- ../../../../templates/app/operators/strimzi-kafka-operator/base
+- ../../../../manifests/app/operators/strimzi-kafka-operator/base

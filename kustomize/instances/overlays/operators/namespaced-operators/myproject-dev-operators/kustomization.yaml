@@ -5,8 +5,8 @@ kind: Kustomization
 namespace: myproject-dev
 
 bases:
-- ../../../../../templates/app/operators/strimzi-kafka-operator/base
-- ../../../../../templates/app/operators/prometheus-operator/base
+- ../../../../../manifests/app/operators/strimzi-kafka-operator/base
+- ../../../../../manifests/app/operators/prometheus-operator/base
 
 resources:
 - myproject-operatorgroup.yaml

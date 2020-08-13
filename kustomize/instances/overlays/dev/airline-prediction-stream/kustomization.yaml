@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: airlineprediction-stream-dev
 
 bases:
-- ../../../../templates/app/frontend/airline-prediction-stream/base
+- ../../../../manifests/app/frontend/airline-prediction-stream/base
 
 resources:
 - namespace.yaml

@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: codeready
 
 bases:
-- ../../../../templates/app/backend/codeready-workspaces-service/base
+- ../../../../manifests/app/backend/codeready-workspaces-service/base
