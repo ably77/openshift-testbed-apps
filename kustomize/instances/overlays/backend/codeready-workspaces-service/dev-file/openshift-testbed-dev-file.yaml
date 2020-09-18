@@ -11,6 +11,16 @@ projects:
       location: 'https://github.com/ably77/openshift-testbed-apps'
       type: git
       branch: master
+  - name: spring-petclinic
+    source:
+      location: 'http://gogs:gogs@gogs-demo-cicd.apps.ly-demo.west.aws.redhat-demo.com/gogs/spring-petclinic'
+      type: git
+      branch: master
+  - name: openshift-tasks
+    source:
+      location: 'http://gogs:gogs@gogs-cicd-ally.apps.ly-demo.west.aws.redhat-demo.com/gogs/openshift-tasks.git'
+      type: git
+      branch: master
 components:
   - id: ms-vscode/go/latest
     memoryLimit: 1024Mi
