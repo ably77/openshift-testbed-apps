@@ -26,11 +26,11 @@ resources:
 #
 # use-case: retire version 1 and send traffic to v2 and v3 50/50
 # Refresh the webpage repeatedly. We see half the results show red and half with black stars as expected.
-- patches/virtual-service-reviews-v2-v3.yaml
+#- patches/virtual-service-reviews-v2-v3.yaml
 #
 # use-case: 100% traffic to v3
 # Refresh the webpage repeatedly. You'll only see version 3 red stars.
-#- patches/virtual-service-reviews-v3.yaml
+- patches/virtual-service-reviews-v3.yaml
 #
 # use-case: fault injection
 # Apply a fault injection on our details microservice to always return an error - a HTTP status of 555
