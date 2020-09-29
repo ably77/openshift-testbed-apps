@@ -25,7 +25,7 @@ resources:
 #
 # use-case: retire version 1 and send traffic to v2 and v3 50/50
 # Refresh the webpage repeatedly. We see half the results show red and half with black stars as expected.
-#- demo/virtual-service-reviews-v2-v3.yaml
+- demo/virtual-service-reviews-v2-v3.yaml
 #
 # use-case: 100% traffic to v3
 # Refresh the webpage repeatedly. You'll only see version 3 red stars.
