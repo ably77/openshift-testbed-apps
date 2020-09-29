@@ -16,7 +16,7 @@ resources:
 # user-story: route all traffic to v1
 # A virtual service defines a set of traffic routing rules to apply when a host is addressed. 
 # This includes the service version, in this case version 1 of all services (version 1 of Reviews, with no stars)
-- demo/virtual-service-all-v1.yaml
+#- demo/virtual-service-all-v1.yaml
 #
 # use-case: distinguish individual users in routing decisions
 # Login as with credentials jason/jason. Refresh the webpage several times. 
