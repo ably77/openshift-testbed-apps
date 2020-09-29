@@ -11,7 +11,7 @@ resources:
 - namespace.yaml
 - destination-rule-all.yaml
 
-# apply the configurations below to demo service mesh in action
+# uncomment the demo configurations below and apply to show service mesh in action
 #
 # user-story: route all traffic to v1
 # A virtual service defines a set of traffic routing rules to apply when a host is addressed. 
