@@ -10,7 +10,7 @@ bases:
 resources:
 - namespace.yaml
 # user-story: route all traffic round-robin across v1, v2, and v3
-#- destination-rule-all.yaml
+- destination-rule-all.yaml
 
 # apply the configurations below to demo service mesh in action
 #
