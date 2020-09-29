@@ -11,7 +11,8 @@ resources:
 - namespace.yaml
 # user-story: route all traffic round-robin across v1, v2, and v3
 - destination-rule-all.yaml
-- patches/virtual-service-all-v1.yaml
+#- patches/virtual-service-all-v1.yaml
+- patches/virtual-service-reviews-jason-v2-v3.yaml
 
 # apply the patches below to demo service mesh in action
 #
