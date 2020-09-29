@@ -30,8 +30,8 @@ resources:
 #
 # use-case: 100% traffic to v3
 # Refresh the webpage repeatedly. You'll only see version 3 red stars.
-- patches/virtual-service-reviews-v3.yaml
+#- patches/virtual-service-reviews-v3.yaml
 #
 # use-case: fault injection
 # Apply a fault injection on our details microservice to always return an error - a HTTP status of 555
-#- patches/fault-injection-details-v1.yaml
+- patches/fault-injection-details-v1.yaml
