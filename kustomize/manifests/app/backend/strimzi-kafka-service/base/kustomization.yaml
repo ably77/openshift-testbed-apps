@@ -4,8 +4,7 @@ kind: Kustomization
 
 # list of Resource Config to be Applied
 resources:
-#- kafka-2.5.0-ephemeral.yaml
-- kafka-2.6.0-ephemeral.yaml
+- kafka-2.5.0-ephemeral.yaml
 - airlineinputtopic.yaml
 - airlineoutputtopic.yaml
 - my-topic1.yaml
