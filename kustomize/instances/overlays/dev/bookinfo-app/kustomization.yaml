@@ -9,7 +9,7 @@ bases:
 
 resources:
 - namespace.yaml
-#- destination-rule-all.yaml
+- destination-rule-all.yaml
 
 # uncomment the demo configurations below and apply to show service mesh in action
 #
@@ -32,6 +32,6 @@ resources:
 #- demo/virtual-service-reviews-v3.yaml
 #
 # use-case: fault injection
-# Apply a fault injection on our details microservice to always return an error - a HTTP status of 555
+# Apply a fault injection on our details microservice to inject errors - a HTTP status of 555
 # be sure to comment out the destination-rule-all.yaml above
-- demo/fault-injection-details-v1.yaml
+#- demo/fault-injection-details-v1.yaml
