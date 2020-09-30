@@ -9,7 +9,7 @@ bases:
 
 resources:
 - namespace.yaml
-- destination-rule-all.yaml
+#- destination-rule-all.yaml
 
 # uncomment the demo configurations below and apply to show service mesh in action
 #
@@ -25,7 +25,7 @@ resources:
 #
 # use-case: retire version 1 and send traffic to v2 and v3 50/50
 # Refresh the webpage repeatedly. We see half the results show red and half with black stars as expected.
-- demo/virtual-service-reviews-v2-v3.yaml
+#- demo/virtual-service-reviews-v2-v3.yaml
 #
 # use-case: 100% traffic to v3
 # Refresh the webpage repeatedly. You'll only see version 3 red stars.
@@ -33,4 +33,5 @@ resources:
 #
 # use-case: fault injection
 # Apply a fault injection on our details microservice to always return an error - a HTTP status of 555
-#- demo/fault-injection-details-v1.yaml
+# be sure to comment out the destination-rule-all.yaml above
+- demo/fault-injection-details-v1.yaml
