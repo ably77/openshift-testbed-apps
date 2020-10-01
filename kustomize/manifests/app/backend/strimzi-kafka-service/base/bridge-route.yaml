@@ -5,7 +5,7 @@ metadata:
   annotations:
     openshift.io/host.generated: "true"
 spec:
-  host: my-bridge.io 
+  #host: my-bridge.io 
   to:
     kind: Service
     name: my-bridge-bridge-service
