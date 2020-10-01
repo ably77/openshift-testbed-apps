@@ -10,6 +10,6 @@ resources:
 - my-topic1.yaml
 - my-topic2.yaml
 - kafka-bridge.yaml
-#- bridge-route.yaml
+- bridge-route.yaml
 
 
