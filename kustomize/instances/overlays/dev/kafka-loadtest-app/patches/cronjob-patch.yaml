@@ -9,7 +9,7 @@ spec:
   #schedule: '*/30 * * * *'
   jobTemplate:
     spec:
-      parallelism: 5
+      parallelism: 1
       completions: 4
       template:
         metadata:
