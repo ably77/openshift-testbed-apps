@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Route
 metadata:
   name: my-bridge-route
+annotations:
+    openshift.io/host.generated: 'true'
 spec:
   #host: my-bridge.io 
   to:
