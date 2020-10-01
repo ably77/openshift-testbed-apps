@@ -7,20 +7,14 @@ spec:
   schedule: '*/1 * * * *'
   # once a week at 00:00 on Sunday
   #schedule: '*/30 * * * *'
-  concurrencyPolicy: Allow
   jobTemplate:
     spec:
-      parallelism: 1
+      parallelism: 5
       completions: 4
       template:
         metadata:
-          annotations:
-            argocd.argoproj.io/hook: PostSync
-            argocd.argoproj.io/hook-delete-policy: HookSucceeded
         spec:
           containers:
-          - name: hello-world-producer
-            image: strimzi/hello-world-producer:latest
             env:
               - name: BOOTSTRAP_SERVERS
                 value: my-cluster-kafka-bootstrap.myproject-dev:9092
@@ -34,8 +28,3 @@ spec:
                 value: "10000"
               - name: PRODUCER_ACKS
                 value: "all"
-              - name: ADDITIONAL_CONFIG
-                value: |
-                  retries=100
-          restartPolicy: OnFailure
-      backoffLimit: 5

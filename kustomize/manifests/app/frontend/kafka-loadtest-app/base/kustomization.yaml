@@ -5,7 +5,6 @@ kind: Kustomization
 # list of Resource Config to be Applied
 resources:
 - cron_job1.yaml
-- mytopic1_consumer.yaml
-- mytopic2_consumer.yaml
+- hw-consumer.yaml
 
 
