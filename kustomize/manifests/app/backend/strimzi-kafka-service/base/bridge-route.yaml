@@ -11,3 +11,8 @@ spec:
     name: my-bridge-bridge-service
   port:
     targetPort: rest-api
+status:
+  ingress:
+    - conditions:
+        - status: 'True'
+          type: Admitted
