@@ -1,16 +1,22 @@
-apiVersion: v1
+---
+apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: my-bridge-route
+  labels:
+    app: iot-demo
+    name: consumer-app
+  name: consumer-app
   annotations:
     openshift.io/host.generated: "true"
+    #argocd.argoproj.io/hook: PreSync
 spec:
-  #host: my-bridge.io 
+  port:
+    targetPort: http
   to:
     kind: Service
-    name: my-bridge-bridge-service
-  port:
-    targetPort: rest-api
+    name: consumer-app
+    weight: 100
+  wildcardPolicy: None
 status:
   ingress:
     - conditions:
