@@ -13,7 +13,7 @@ spec:
   jobTemplate:
     spec:
       parallelism: 1
-      completions: 4
+      completions: 5
       template:
         metadata:
           annotations:
@@ -33,7 +33,7 @@ spec:
               - name: LOG_LEVEL
                 value: "INFO"
               - name: MESSAGE_COUNT
-                value: "10000"
+                value: "1000000"
               - name: PRODUCER_ACKS
                 value: "all"
               - name: ADDITIONAL_CONFIG
