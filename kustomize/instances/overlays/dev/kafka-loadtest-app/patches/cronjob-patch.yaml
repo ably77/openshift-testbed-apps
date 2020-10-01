@@ -15,6 +15,7 @@ spec:
         metadata:
         spec:
           containers:
+          - name: hello-world-producer
             env:
               - name: BOOTSTRAP_SERVERS
                 value: my-cluster-kafka-bootstrap.myproject-dev:9092

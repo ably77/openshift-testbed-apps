@@ -11,4 +11,4 @@ resources:
 - namespace.yaml
 
 patchesStrategicMerge:
-- patches/cronjob-patch.yaml
+#- patches/cronjob-patch.yaml
