@@ -6,5 +6,6 @@ kind: Kustomization
 resources:
 - cron_job1.yaml
 - hw-consumer.yaml
+- hw-streams.yaml
 
 

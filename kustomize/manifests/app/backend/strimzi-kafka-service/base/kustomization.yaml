@@ -9,6 +9,7 @@ resources:
 - airlineoutputtopic.yaml
 - my-topic1.yaml
 - my-topic2.yaml
+- mytopic_reversed.yaml
 - kafka-bridge.yaml
 - bridge-route.yaml
 
