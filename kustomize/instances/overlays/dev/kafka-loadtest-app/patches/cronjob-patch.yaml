@@ -7,8 +7,8 @@ spec:
   #schedule: '*/1 * * * *'
   # once a week at 00:00 on Sunday
   #schedule: '*/30 * * * *'
-  # once per hour
-  schedule: '0 * * * *'
+  # once per fifteen minutes
+  schedule: '*/15 * * * *'
   jobTemplate:
     spec:
       parallelism: 1
