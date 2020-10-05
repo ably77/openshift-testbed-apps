@@ -23,7 +23,7 @@ spec:
             - name: APPLICATION_ID
               value: hello-world-streams
             - name: SOURCE_TOPIC
-              value: my-topic-stream
+              value: my-topic
             - name: TARGET_TOPIC
               value: my-topic-reversed
             - name: LOG_LEVEL
