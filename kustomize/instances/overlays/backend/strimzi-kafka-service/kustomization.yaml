@@ -7,6 +7,6 @@ namespace: myproject-dev
 bases:
 - ../../../../manifests/app/backend/strimzi-kafka-service/base
 
-resources:
-- mm2-target-kafka.yaml
-- mm2.yaml
+#resources:
+#- mm2-target-kafka.yaml
+#- mm2.yaml
