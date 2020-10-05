@@ -1,33 +1,16 @@
 apiVersion: kafka.strimzi.io/v1alpha1
 kind: KafkaMirrorMaker2
 metadata:
-  name: my-mirror-maker-2
+  name: my-mirror-maker2
 spec:
-  version: 2.5.0
-  replicas: 1
-  connectCluster: "mm2-target-kafka"
+  version: 2.4.0
+  connectCluster: "my-cluster-target"
   clusters:
-  - alias: "my-cluster"
+  - alias: "my-cluster-source"
     bootstrapServers: my-cluster-kafka-bootstrap.myproject-dev:9092
-  - alias: "mm2-target-kafka"
+  - alias: "my-cluster-target"
     bootstrapServers: mm2-target-kafka-kafka-bootstrap.myproject-dev:9092
-    config:
-      config.storage.replication.factor: 1
-      offset.storage.replication.factor: 1
-      status.storage.replication.factor: 1
   mirrors:
-  - sourceCluster: "my-cluster"
-    targetCluster: "mm2-target-kafka"
-    sourceConnector:
-      config:
-        replication.factor: 1
-        offset-syncs.topic.replication.factor: 1
-        sync.topic.acls.enabled: "false"
-    heartbeatConnector:
-      config:
-        heartbeats.topic.replication.factor: 1
-    checkpointConnector:
-      config:
-        checkpoints.topic.replication.factor: 1
-    topicsPattern: ".*"
-    groupsPattern: ".*"
+  - sourceCluster: "my-cluster-source"
+    targetCluster: "my-cluster-target"
+    sourceConnector: {}
