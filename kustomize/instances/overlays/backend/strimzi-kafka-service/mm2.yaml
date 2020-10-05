@@ -7,7 +7,7 @@ spec:
   replicas: 1
   connectCluster: "mm2-target-kafka"
   clusters:
-  - alias: "my-source-cluster"
+  - alias: "my-cluster"
     bootstrapServers: my-cluster-kafka-bootstrap.myproject-dev:9092
   - alias: "mm2-target-kafka"
     bootstrapServers: mm2-target-kafka-kafka-bootstrap.myproject-dev:9092
@@ -16,7 +16,7 @@ spec:
       offset.storage.replication.factor: 1
       status.storage.replication.factor: 1
   mirrors:
-  - sourceCluster: "my-source-cluster"
+  - sourceCluster: "my-cluster"
     targetCluster: "mm2-target-kafka"
     sourceConnector:
       config:
