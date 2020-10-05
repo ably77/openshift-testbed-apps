@@ -10,7 +10,7 @@ spec:
   - alias: "my-source-cluster"
     bootstrapServers: my-cluster-kafka-bootstrap.myproject-dev:9092
   - alias: "mm2-target-kafka"
-    bootstrapServers: mm2-target-kafka-kafka-bootstrap:9092
+    bootstrapServers: mm2-target-kafka-kafka-bootstrap.myproject-dev:9092
     config:
       config.storage.replication.factor: 1
       offset.storage.replication.factor: 1
