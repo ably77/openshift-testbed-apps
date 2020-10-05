@@ -4,9 +4,11 @@ metadata:
   name: cron-producer-hw
 spec:
   # once every two minutes
-  schedule: '*/1 * * * *'
+  #schedule: '*/1 * * * *'
   # once a week at 00:00 on Sunday
   #schedule: '*/30 * * * *'
+  # once per hour
+  schedule: '0 * * * *'
   jobTemplate:
     spec:
       parallelism: 1
