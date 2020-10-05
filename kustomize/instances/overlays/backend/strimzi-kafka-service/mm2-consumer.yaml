@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mm2-mytopic-consumer
+  name: mm2-mytopic-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mm2-mytopic-consumer
+  template:
+    metadata:
+      labels:
+        app: mm2-mytopic-consumer
+    spec:
+      containers:
+      - name: my-topic-consumer
+        image: strimzi/hello-world-consumer:latest
+        env:
+          - name: BOOTSTRAP_SERVERS
+            value: mm2-target-kafka-kafka-bootstrap.myproject-dev:9092
+          - name: TOPIC
+            value: my-source-cluster.my-topic
+          - name: GROUP_ID
+            value: mm2-mytopic-consumer
+          - name: LOG_LEVEL
+            value: "INFO"
+          - name: MESSAGE_COUNT
+            value: "10000000"
+          - name: ADDITIONAL_CONFIG
+            value: |
+              max.poll.records=100

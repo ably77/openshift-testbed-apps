@@ -10,3 +10,4 @@ bases:
 #resources:
 - mm2-target-kafka.yaml
 - mm2.yaml
+- mm2-consumer.yaml
