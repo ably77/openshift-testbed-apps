@@ -5,19 +5,19 @@ metadata:
 spec:
   version: 2.5.0
   replicas: 1
-  connectCluster: "mm2-target-kafka"
+  connectCluster: "my-target-cluster"
   clusters:
-  - alias: "my-cluster"
+  - alias: "my-source-cluster"
     bootstrapServers: my-cluster-kafka-bootstrap.myproject-dev:9092
-  - alias: "mm2-target-kafka"
+  - alias: "my-target-cluster"
     bootstrapServers: mm2-target-kafka-kafka-bootstrap.myproject-dev:9092
     config:
       config.storage.replication.factor: 1
       offset.storage.replication.factor: 1
       status.storage.replication.factor: 1
   mirrors:
-  - sourceCluster: "my-cluster"
-    targetCluster: "mm2-target-kafka"
+  - sourceCluster: "my-source-cluster"
+    targetCluster: "my-target-cluster"
     sourceConnector:
       config:
         replication.factor: 1
