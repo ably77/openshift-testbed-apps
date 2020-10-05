@@ -4,7 +4,6 @@ metadata:
   name: my-topic1
   labels:
     strimzi.io/cluster: my-cluster
-    strimzi.io/cluster: mm2-target-kafka
 spec:
   partitions: 3
   replicas: 3
