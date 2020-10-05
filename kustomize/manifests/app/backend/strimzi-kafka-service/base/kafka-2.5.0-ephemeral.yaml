@@ -235,3 +235,4 @@ spec:
       #limits:
         #memory: "256Mi"
         #dcpu: "100m"
+  cruiseControl: {}
