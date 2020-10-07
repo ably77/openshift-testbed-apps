@@ -4,7 +4,7 @@ kind: Kustomization
 
 # list of Resource Config to be Applied
 resources:
-- masters-scheduleable.yaml
+- masters-schedulable.yaml
 
 
 

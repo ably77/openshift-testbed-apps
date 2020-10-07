@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: openshift-operators
 
 bases:
-- ../../../../../manifests/cluster-config/node-feature-discovery-operator/base
+- ../../../../../manifests/operators/node-feature-discovery-operator/base

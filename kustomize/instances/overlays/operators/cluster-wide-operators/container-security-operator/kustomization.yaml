@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: openshift-operators
 
 bases:
-- ../../../../../manifests/cluster-config/container-security-operator/base
+- ../../../../../manifests/operators/container-security-operator/base
