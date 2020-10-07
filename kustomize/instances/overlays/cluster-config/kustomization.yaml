@@ -5,3 +5,9 @@ bases:
 - ../../../manifests/cluster-config/cluster-autoscaler/base
 - ../../../manifests/cluster-config/masters-schedulable/base
 - ../../../manifests/cluster-config/operatorhub-catalog/base
+
+patchesStrategicMerge:
+#- patches/schedulable-true.yaml
+#- patches/clusterautoscaler.yaml
+#- patches/disable-all-oh.yaml
+#- patches/disable-community-oh.yaml

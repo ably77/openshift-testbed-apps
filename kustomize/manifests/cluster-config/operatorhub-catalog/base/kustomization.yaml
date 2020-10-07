@@ -4,10 +4,7 @@ kind: Kustomization
 
 # list of Resource Config to be Applied
 resources:
-# uncomment below to disable just community operators from operatorhub
-- disable-community-oh.yaml
-# uncomment below to disable the entire operatorhub catalog
-#- disable-oh.yaml
+- all-operator-catalogs.yaml
 
 
 
