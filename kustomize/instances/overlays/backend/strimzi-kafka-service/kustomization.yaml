@@ -7,8 +7,8 @@ namespace: myproject-dev
 bases:
 - ../../../../manifests/app/backend/strimzi-kafka-service/base
 
-#resources:
+resources:
 # uncomment below if you want to deploy the mirrormaker2 demo
-#- mm2-target-kafka.yaml
-#- mm2.yaml
-#- mm2-consumer.yaml
+- mm2-target-kafka.yaml
+- mm2.yaml
+- mm2-consumer.yaml
