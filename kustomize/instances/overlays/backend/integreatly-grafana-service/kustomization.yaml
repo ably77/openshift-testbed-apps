@@ -9,3 +9,6 @@ bases:
 
 patchesStrategicMerge:
 - patches/prometheus-ds.yaml
+
+resources:
+- test-dashboard.yaml
