@@ -11,4 +11,4 @@ patchesStrategicMerge:
 - patches/prometheus-ds.yaml
 
 resources:
-- test-dashboard.yaml
+#- test-dashboard.yaml
