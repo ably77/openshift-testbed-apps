@@ -4,7 +4,7 @@ kind: GrafanaDashboard
 metadata:
   labels:
     app: grafana
-  name: kafka-dashboard
+  name: kafka-dashboard-new
 spec:
   json: |
       {"annotations": {
@@ -736,11 +736,11 @@ spec:
            "steppedLine": false,
            "targets": [
              {
-               "expr": "sum(container_memory_usage_bytes{namespace=\"$kubernetes_namespace\",kubernetes_pod_name=~\"$strimzi_cluster_name-$kafka_broker\",container_name=\"kafka\"}) by (kubernetes_pod_name)",
+               "expr": "sum(container_memory_usage_bytes{namespace=\"$kubernetes_namespace\",pod=~\"$strimzi_cluster_name-$kafka_broker\",container=\"kafka\"}) by (pod)",
                "format": "time_series",
                "hide": false,
                "intervalFactor": 1,
-               "legendFormat": "{{kubernetes_pod_name}}",
+               "legendFormat": "{{pod}}",
                "refId": "A"
              }
            ],
