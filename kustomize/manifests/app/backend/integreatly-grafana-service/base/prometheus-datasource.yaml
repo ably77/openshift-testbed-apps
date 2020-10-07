@@ -5,7 +5,7 @@ metadata:
 spec:
   name: prometheus-datasource.yaml
   datasources:
-    - name: Prometheus
+    - name: DS_PROMETHEUS
       type: prometheus
       access: proxy
       url: http://prometheus.prometheus:9090
