@@ -4,7 +4,7 @@ metadata:
   name: prometheus-datasource
 spec:
   datasources:
-    - name: '${DS_PROMETHEUS}'
+    - name: ${DS_PROMETHEUS}
       type: prometheus
       access: proxy
       url: http://prometheus.myproject-dev:9090
