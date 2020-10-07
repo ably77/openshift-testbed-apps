@@ -8,7 +8,7 @@ resources:
 - kafka-dashboard.yaml
 - kafka-exporter.yaml
 - prometheus.yaml
-- test-dashboard.yaml
+#- test-dashboard.yaml
 - zookeeper-dashboard.yaml
 
 
