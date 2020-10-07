@@ -11,4 +11,7 @@ patchesStrategicMerge:
 - patches/prometheus-ds.yaml
 
 resources:
-- test-dashboard.yaml
+- kafka-dashboard-url.yaml
+#- kafka-dashboard.yaml
+- zookeeper-dashboard.yaml
+- kafka-exporter.yaml
