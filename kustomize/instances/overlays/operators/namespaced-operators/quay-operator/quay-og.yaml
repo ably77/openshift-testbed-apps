@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: quay-enterprise-og
+  namespace: quay-enterprise
+spec:
+  targetNamespaces:
+  - quay-enterprise
