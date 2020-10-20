@@ -8,5 +8,4 @@ bases:
 - ../../../../../manifests/app/operators/quay-operator/base
 
 resources:
-- quay-namespace.yaml
 - quay-og.yaml
