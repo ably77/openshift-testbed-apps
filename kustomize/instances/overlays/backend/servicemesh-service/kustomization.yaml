@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # namespace to deploy all Resources to
-namespace: istio-system
+#namespace: istio-system
 
 bases:
 - ../../../../manifests/app/backend/servicemesh-service/base
