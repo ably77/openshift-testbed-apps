@@ -1,0 +1,7 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: line-dashboard
+spec:
+  # gcp
+  host: line-dashboard-manuela-quickstart-line-dashboard.apps.ly-demo.gcpocp.com
