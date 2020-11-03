@@ -9,3 +9,4 @@ bases:
 
 resources:
 - quay-og.yaml
+- quay-namespace.yaml
