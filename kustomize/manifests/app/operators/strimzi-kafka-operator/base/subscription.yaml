@@ -4,7 +4,7 @@ metadata:
   name: strimzi-kafka-operator
   namespace: openshift-operators
 spec:
-  channel: stable
+  channel: strimzi-0.19.x
   installPlanApproval: Automatic
   name: strimzi-kafka-operator
   source: community-operators
