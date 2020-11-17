@@ -8,3 +8,44 @@ resources:
 - manuela-line-dashboard-app.yaml
 - manuela-machine-sensor-app.yaml
 - bookinfo-app.yaml
+
+patchesJson6902:
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: iotdemo-app
+    namespace: argocd
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: kafka-loadtest-app
+    namespace: argocd
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: bookinfo-app
+    namespace: argocd
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: manuela-line-dashboard
+    namespace: argocd
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: manuela-machine-sensor
+    namespace: argocd
+  path: patches/github-username-patch.yaml
