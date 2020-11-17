@@ -13,11 +13,13 @@ resources:
 - strimzi-kafka-service.yaml
 
 patchesJson6902:
+
 - target:
     group: argoproj.io
     version: v1alpha1
     kind: Application
     name: amq-broker-service
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -25,6 +27,7 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: codeready-workspaces
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -32,6 +35,7 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: integreatly-grafana-service
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -39,6 +43,7 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: node-feature-discovery-service
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -46,6 +51,7 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: openshift-pipelines-service
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -53,6 +59,7 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: podium-service
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -60,6 +67,7 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: servicemesh-service
+    namespace: argocd
   path: patches/github-username-patch.yaml
 
 - target:
@@ -67,4 +75,5 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: strimzi-kafka-cluster
+    namespace: argocd
   path: patches/github-username-patch.yaml
