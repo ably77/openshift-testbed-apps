@@ -8,9 +8,9 @@ metadata:
 spec:
   project: main
   source:
-    repoURL: https://github.com/ably77/openshift-testbed
+    repoURL: https://github.com/ably77/openshift-testbed-apps
     targetRevision: HEAD
-    path: argocd/apps/dev/aws
+    path: argo-apps/dev/aws
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
