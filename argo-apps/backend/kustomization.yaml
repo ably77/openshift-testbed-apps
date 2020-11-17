@@ -1,0 +1,70 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- amq-broker-service.yaml
+- codeready-workspaces-service.yaml
+- integreatly-grafana-service.yaml
+- nfd-service.yaml
+- openshift-pipelines-service.yaml
+- podium-service.yaml
+- servicemesh-service.yaml
+- strimzi-kafka-service.yaml
+
+patchesJson6902:
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: amq-broker-service
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: codeready-workspaces
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: integreatly-grafana-service
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: node-feature-discovery-service
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: openshift-pipelines-service
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: podium-service
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: servicemesh-service
+  path: patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: strimzi-kafka-cluster
+  path: patches/github-username-patch.yaml
