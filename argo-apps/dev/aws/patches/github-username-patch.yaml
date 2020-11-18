@@ -1,4 +1,4 @@
 - op: replace
   path: /spec/source/repoURL
   # replace value: https://github.com/<USER>/openshift-testbed-apps
-  value: https://github.com/ably7/openshift-testbed-apps
+  value: https://github.com/ably77/openshift-testbed-apps
