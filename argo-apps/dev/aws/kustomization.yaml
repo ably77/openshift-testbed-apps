@@ -16,7 +16,7 @@ patchesJson6902:
     kind: Application
     name: iotdemo-app
     namespace: argocd
-  path: patches/github-username-patch.yaml
+  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
@@ -24,7 +24,7 @@ patchesJson6902:
     kind: Application
     name: kafka-loadtest-app
     namespace: argocd
-  path: patches/github-username-patch.yaml
+  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
@@ -32,7 +32,7 @@ patchesJson6902:
     kind: Application
     name: bookinfo-app
     namespace: argocd
-  path: patches/github-username-patch.yaml
+  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
@@ -40,7 +40,7 @@ patchesJson6902:
     kind: Application
     name: manuela-line-dashboard
     namespace: argocd
-  path: patches/github-username-patch.yaml
+  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
@@ -48,4 +48,4 @@ patchesJson6902:
     kind: Application
     name: manuela-machine-sensor
     namespace: argocd
-  path: patches/github-username-patch.yaml
+  path: meta/patches/github-username-patch.yaml
