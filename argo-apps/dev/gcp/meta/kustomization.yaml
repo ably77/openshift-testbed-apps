@@ -1,0 +1,16 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- meta-dev-apps-gcp.yaml
+
+patchesJson6902:
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: meta-frontend-apps
+    namespace: argocd
+  path: patches/github-username-patch.yaml
+
