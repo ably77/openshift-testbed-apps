@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/ably77/openshift-testbed-apps
     targetRevision: HEAD
-    path: argo-apps/vsphere
+    path: argo-apps/dev/vsphere
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
