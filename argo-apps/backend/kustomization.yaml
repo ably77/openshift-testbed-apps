@@ -37,13 +37,13 @@ patchesJson6902:
     namespace: argocd
   path: meta/patches/github-username-patch.yaml
 
-- target:
-    group: argoproj.io
-    version: v1alpha1
-    kind: Application
-    name: node-feature-discovery-service
-    namespace: argocd
-  path: meta/patches/github-username-patch.yaml
+#- target:
+#    group: argoproj.io
+#    version: v1alpha1
+#    kind: Application
+#    name: node-feature-discovery-service
+#    namespace: argocd
+#  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
