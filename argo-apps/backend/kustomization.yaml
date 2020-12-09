@@ -6,7 +6,7 @@ resources:
 - amq-broker-service.yaml
 - codeready-workspaces-service.yaml
 - integreatly-grafana-service.yaml
-- nfd-service.yaml
+#- nfd-service.yaml
 - openshift-pipelines-service.yaml
 - podium-service.yaml
 - servicemesh-service.yaml
