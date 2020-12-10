@@ -6,7 +6,7 @@ resources:
 - amq-broker-service.yaml
 - codeready-workspaces-service.yaml
 - integreatly-grafana-service.yaml
-#- nfd-service.yaml
+- nfd-service.yaml
 - openshift-pipelines-service.yaml
 - podium-service.yaml
 - servicemesh-service.yaml
@@ -37,13 +37,13 @@ patchesJson6902:
     namespace: argocd
   path: meta/patches/github-username-patch.yaml
 
-#- target:
-#    group: argoproj.io
-#    version: v1alpha1
-#    kind: Application
-#    name: node-feature-discovery-service
-#    namespace: argocd
-#  path: meta/patches/github-username-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: node-feature-discovery-service
+    namespace: argocd
+  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
