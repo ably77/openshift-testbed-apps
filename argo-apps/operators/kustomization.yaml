@@ -8,7 +8,7 @@ resources:
 - integreatly-grafana-operator.yaml
 - metering-operator.yaml
 - myproject-operators.yaml
-#- nfd-operator.yaml
+- nfd-operator.yaml
 - openshift-pipelines-operator.yaml
 - podium-operator.yaml
 - servicemesh-operator.yaml
@@ -55,13 +55,13 @@ patchesJson6902:
     namespace: argocd
   path: meta/patches/github-username-patch.yaml
 
-#- target:
-#    group: argoproj.io
-#    version: v1alpha1
-#    kind: Application
-#    name: node-feature-discovery-operator
-#    namespace: argocd
-#  path: meta/patches/github-username-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: node-feature-discovery-operator
+    namespace: argocd
+  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
