@@ -23,7 +23,7 @@ configMapGenerator:
   - configmaps/machine-sensor-2-configmap.properties
 
 
-images:
-- name: machine-sensor
-  newName: quay.io/manuela/iot-software-sensor
-  newTag: 0.3.1-16
+#images:
+#- name: machine-sensor
+#  newName: quay.io/manuela/iot-software-sensor
+#  newTag: 0.3.1-16
