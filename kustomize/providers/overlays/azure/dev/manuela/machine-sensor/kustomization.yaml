@@ -26,4 +26,4 @@ configMapGenerator:
 images:
 - name: machine-sensor
   newName: quay.io/manuela/iot-software-sensor
-  newTag: quickstart
+  newTag: 0.3.1-16
