@@ -7,5 +7,4 @@ spec:
     spec:
       containers:
       - name: machine-sensor
-        image: quay.io/manuela/iot-software-sensor:0.3.1-16
         imagePullPolicy: Always
