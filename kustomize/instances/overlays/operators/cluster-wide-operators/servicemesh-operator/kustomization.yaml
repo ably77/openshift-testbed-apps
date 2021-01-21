@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
 - ../../../../../manifests/app/operators/elasticsearch-operator/base
-- ../../../../../manifests/app/operators/kiali-operator/base
+#- ../../../../../manifests/app/operators/kiali-operator/base
 - ../../../../../manifests/app/operators/jaeger-operator/base
 - ../../../../../manifests/app/operators/servicemesh-operator/base
 
