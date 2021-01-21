@@ -4,7 +4,6 @@ kind: Kustomization
 
 # list of Resource Config to be Applied
 resources:
-#- servicemesh-cr.yaml
 - servicemesh-cr-v2.yaml
 - sm-member-role.yaml
 
