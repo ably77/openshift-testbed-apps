@@ -4,7 +4,7 @@ kind: Kustomization
 
 # list of Resource Config to be Applied
 resources:
-#- bookinfo.yaml
-#- bookinfo-gateway.yaml
+- bookinfo.yaml
+- bookinfo-gateway.yaml
 
 
