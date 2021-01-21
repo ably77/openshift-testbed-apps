@@ -9,5 +9,5 @@ spec:
   channel: stable
   installPlanApproval: Automatic
   name: kiali
-  source: community-operators
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
