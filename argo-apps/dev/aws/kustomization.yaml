@@ -8,6 +8,7 @@ resources:
 - manuela-line-dashboard-app.yaml
 - manuela-machine-sensor-app.yaml
 - bookinfo-app.yaml
+- airlineprediction.yaml
 
 patchesJson6902:
 - target:
@@ -47,5 +48,13 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: manuela-machine-sensor
+    namespace: argocd
+  path: meta/patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: airlineprediction
     namespace: argocd
   path: meta/patches/github-username-patch.yaml
