@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: airline-prediction-stream
-        image: ably77/airlineprediction-stream:latest
+        image: ably77/airlineprediction-stream:v2
