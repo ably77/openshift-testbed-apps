@@ -9,3 +9,6 @@ bases:
 
 resources:
 - namespace.yaml
+
+patchesStrategicMerge:
+- patches/channel-patch.yaml

@@ -1,0 +1,6 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: metering-ocp 
+spec:
+  channel: "4.7" 
