@@ -4,3 +4,7 @@ metadata:
   name: metering-ocp 
 spec:
   channel: "4.7" 
+  source: "redhat-operators" 
+  sourceNamespace: "openshift-marketplace"
+  name: "metering-ocp"
+  installPlanApproval: "Automatic" 
