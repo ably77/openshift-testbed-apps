@@ -4,8 +4,11 @@ kind: Kustomization
 # namespace to deploy all Resources to
 namespace: podium
 
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
 bases:
-- ../../../../../manifests/app/operators/podium-operator/base
+- ../../../../../manifests/app/operators/podium-operator-unified/base
 
 resources:
 - podium-namespace.yaml
