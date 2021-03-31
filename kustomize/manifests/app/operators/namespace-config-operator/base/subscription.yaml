@@ -11,4 +11,3 @@ spec:
   name: namespace-configuration-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: namespace-configuration-operator.v1.0.3
