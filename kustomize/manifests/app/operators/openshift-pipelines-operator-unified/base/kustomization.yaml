@@ -5,6 +5,6 @@ kind: Kustomization
 # list of Resource Config to be Applied
 resources:
 - subscription.yaml
-- operatorgroup.yaml
+- tekton-cr.yaml
 
 

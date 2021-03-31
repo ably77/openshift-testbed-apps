@@ -4,6 +4,9 @@ kind: Kustomization
 # namespace to deploy all Resources to
 namespace: manuela-quickstart-messaging
 
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
 bases:
 - ../../../../../manifests/app/operators/amq-broker-operator-unified/base
 

@@ -4,6 +4,9 @@ kind: Kustomization
 # namespace to deploy all Resources to
 namespace: grafana
 
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
 bases:
 - ../../../../../manifests/app/operators/integreatly-grafana-operator-unified/base
 
