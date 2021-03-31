@@ -1,9 +1,7 @@
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: myproject-og
+  name: myproject-dev-og
 spec:
   targetNamespaces:
   - myproject-dev
-  #- myproject-test
-  #- myproject-prod
