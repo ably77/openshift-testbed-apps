@@ -1,0 +1,14 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
+# list of Resource Config to be Applied
+resources:
+- codeready-operatorgroup.yaml
+- codeready-workspaces-subscription.yaml
+- codeready-cr.yaml
+
+
