@@ -4,4 +4,4 @@ metadata:
   annotations:
     openshift.io/description: My Project Description
     openshift.io/display-name:  myproject-dev
-  name: namespace-configuration-operator
+  name: myproject-dev
