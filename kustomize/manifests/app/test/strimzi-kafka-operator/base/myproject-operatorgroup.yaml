@@ -5,5 +5,5 @@ metadata:
 spec:
   targetNamespaces:
   - myproject-dev
-  - myproject-test
-  - myproject-prod
+  #- myproject-test
+  #- myproject-prod
