@@ -4,5 +4,8 @@ kind: Kustomization
 # namespace to deploy all Resources to
 namespace: openshift-operators
 
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
 bases:
-- ../../../../../manifests/app/operators/node-feature-discovery-operator/base
+- ../../../../../manifests/app/operators/node-feature-discovery-operator-unified/base
