@@ -4,8 +4,11 @@ kind: Kustomization
 # namespace to deploy all Resources to
 namespace: myproject-dev
 
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
 bases:
-- ../../../../../manifests/app/operators/strimzi-kafka-operator/base
+- ../../../../../manifests/app/operators/strimzi-kafka-operator-unified/base
 - ../../../../../manifests/app/operators/prometheus-operator/base
 
 resources:
