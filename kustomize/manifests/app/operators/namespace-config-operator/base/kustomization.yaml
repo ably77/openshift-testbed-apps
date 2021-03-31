@@ -4,8 +4,8 @@ kind: Kustomization
 namespace: namespace-configuration-operator
 
 resources:
-#- namespace.yaml
-#- operator-group.yaml
+- namespace.yaml
+- operator-group.yaml
 - subscription.yaml
 #- github.com/redhat-canada-gitops/catalog/namespace-configuration-operator/base
 - small-ns-config.yaml
