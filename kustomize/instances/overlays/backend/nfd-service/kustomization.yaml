@@ -3,3 +3,4 @@ kind: Kustomization
 
 bases:
 - ../../../../manifests/app/backend/nfd-service/base
+- ../../../../manifests/app/operators/node-feature-discovery-operator/base
