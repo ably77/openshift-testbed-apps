@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: my-bridge-route
+  annotations:
+    openshift.io/host.generated: "true"
+spec:
+  #host: my-bridge.io 
+  to:
+    kind: Service
+    name: my-bridge-bridge-service
+  port:
+    targetPort: rest-api
+status:
+  ingress:
+    - conditions:
+        - status: 'True'
+          type: Admitted
