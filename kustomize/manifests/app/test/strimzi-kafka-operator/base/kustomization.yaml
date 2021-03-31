@@ -7,7 +7,7 @@ resources:
 - subscription.yaml
 - myproject-namespace.yaml
 - myproject-operatorgroup.yaml
-- kafka-2.5.0-ephemeral.yaml
+#- kafka-2.5.0-ephemeral.yaml
 #- airlineinputtopic.yaml
 #- airlineoutputtopic.yaml
 #- my-topic1.yaml
