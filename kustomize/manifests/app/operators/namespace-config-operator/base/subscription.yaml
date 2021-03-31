@@ -4,7 +4,7 @@ metadata:
   name: namespace-configuration-operator
   namespace: openshift-operators
   labels:
-    operators.coreos.com/namespace-configuration-operator.openshift-operators: ''
+    operators.coreos.com/nfd.openshift-operators: ''
 spec:
   channel: alpha
   installPlanApproval: Automatic
