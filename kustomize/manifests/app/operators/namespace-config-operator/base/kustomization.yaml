@@ -4,8 +4,8 @@ kind: Kustomization
 #namespace: openshift-operators
 
 resources:
-- namespace.yaml
-- operator-group.yaml
+#- namespace.yaml
+#- operator-group.yaml
 - subscription.yaml
 #- github.com/redhat-canada-gitops/catalog/namespace-configuration-operator/base
 - small-ns-config.yaml
