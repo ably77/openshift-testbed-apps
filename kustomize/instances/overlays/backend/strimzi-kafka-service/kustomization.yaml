@@ -5,7 +5,6 @@ kind: Kustomization
 namespace: myproject-dev
 
 bases:
-- ../../../../manifests/app/operator/strimzi-kafka-operator/base
 - ../../../../manifests/app/backend/strimzi-kafka-service/base
 
 resources:
@@ -13,3 +12,4 @@ resources:
 #- mm2-target-kafka.yaml
 #- mm2.yaml
 #- mm2-consumer.yaml
+- subscription.yaml
