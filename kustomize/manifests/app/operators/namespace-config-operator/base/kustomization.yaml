@@ -3,12 +3,9 @@ kind: Kustomization
 
 namespace: namespace-configuration-operator
 
-commonAnnotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-
 resources:
-- namespace.yaml
-- operator-group.yaml
+#- namespace.yaml
+#- operator-group.yaml
 - subscription.yaml
 #- github.com/redhat-canada-gitops/catalog/namespace-configuration-operator/base
 - small-ns-config.yaml
