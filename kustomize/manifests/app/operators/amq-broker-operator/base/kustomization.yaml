@@ -6,5 +6,10 @@ kind: Kustomization
 resources:
 - amq-subscription.yaml
 - amq-operatorgroup.yaml
+- amq-broker-cr.yaml
+- messaging-configmap.yaml
+- messaging-deployment.yaml
+- messaging-svc.yaml
+- route.yaml
 
 

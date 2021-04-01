@@ -8,7 +8,7 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 bases:
-- ../../../../../manifests/app/operators/strimzi-kafka-operator-unified/base
+- ../../../../../manifests/app/operators/strimzi-kafka-operator/base
 - ../../../../../manifests/app/operators/prometheus-operator/base
 
 resources:

@@ -8,7 +8,7 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 bases:
-- ../../../../../manifests/app/operators/podium-operator-unified/base
+- ../../../../../manifests/app/operators/podium-operator/base
 
 resources:
 - podium-namespace.yaml

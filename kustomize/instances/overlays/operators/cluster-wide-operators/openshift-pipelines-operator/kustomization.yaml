@@ -8,4 +8,4 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 bases:
-- ../../../../../manifests/app/operators/openshift-pipelines-operator-unified/base
+- ../../../../../manifests/app/operators/openshift-pipelines-operator/base

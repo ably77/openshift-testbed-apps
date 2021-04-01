@@ -2,9 +2,21 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
+patchesStrategicMerge:
+- patches/prometheus-ds.yaml
+
 # list of Resource Config to be Applied
 resources:
 - subscription.yaml
 - operatorgroup.yaml
+- grafana-cr.yaml
+- prometheus-datasource.yaml
+- kafka-dashboard-url.yaml
+- kafka-dashboard.yaml
+- zookeeper-dashboard.yaml
+- kafka-exporter.yaml
 
 

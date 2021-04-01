@@ -1,9 +1,0 @@
----
-apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  name: manuela-quickstart-messaging
-  namespace: manuela-quickstart-messaging
-spec:
-  targetNamespaces:
-  - manuela-quickstart-messaging

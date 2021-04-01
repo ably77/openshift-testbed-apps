@@ -6,5 +6,6 @@ kind: Kustomization
 resources:
 - subscription.yaml
 - podium-og.yaml
+- podium-cr.yaml
 
 

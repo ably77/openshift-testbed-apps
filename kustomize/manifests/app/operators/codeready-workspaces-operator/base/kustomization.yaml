@@ -6,5 +6,6 @@ kind: Kustomization
 resources:
 - codeready-operatorgroup.yaml
 - codeready-workspaces-subscription.yaml
+- codeready-cr.yaml
 
 

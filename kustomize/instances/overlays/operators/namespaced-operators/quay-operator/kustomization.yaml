@@ -8,7 +8,7 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 bases:
-- ../../../../../manifests/app/operators/quay-operator-unified/base
+- ../../../../../manifests/app/operators/quay-operator/base
 
 resources:
 - quay-og.yaml

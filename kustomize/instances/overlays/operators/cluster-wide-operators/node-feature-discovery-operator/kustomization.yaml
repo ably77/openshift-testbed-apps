@@ -8,4 +8,4 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 bases:
-- ../../../../../manifests/app/operators/node-feature-discovery-operator-unified/base
+- ../../../../../manifests/app/operators/node-feature-discovery-operator/base

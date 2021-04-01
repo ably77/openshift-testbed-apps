@@ -8,7 +8,7 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 bases:
-- ../../../../../manifests/app/operators/codeready-workspaces-operator-unified/base
+- ../../../../../manifests/app/operators/codeready-workspaces-operator/base
 
 resources:
 - codeready-namespace.yaml
