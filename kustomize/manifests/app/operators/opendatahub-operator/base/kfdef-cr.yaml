@@ -71,8 +71,8 @@ spec:
     - kustomizeConfig:
         repoRef:
           name: manifests
-          path: grafana/grafana
-      name: grafana-instance
+          path: grafana/cluster
+      name: grafana-cluster
   repos:
     - name: kf-manifests
       uri: 'https://github.com/kubeflow/manifests/tarball/v1.2-branch'
