@@ -23,14 +23,14 @@ spec:
           name: manifests
           path: superset
       name: superset
-    #- kustomizeConfig:
-    #    parameters:
-    #      - name: namespace
-    #        value: openshift-operators
-    #    repoRef:
-    #      name: manifests
-    #      path: kafka/cluster
-    #  name: strimzi-operator
+    - kustomizeConfig:
+        parameters:
+          - name: namespace
+            value: odh
+        repoRef:
+          name: manifests
+          path: kafka/cluster
+      name: strimzi-operator
     - kustomizeConfig:
         repoRef:
           name: manifests
