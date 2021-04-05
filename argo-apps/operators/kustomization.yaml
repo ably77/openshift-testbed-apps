@@ -14,6 +14,7 @@ resources:
 - servicemesh-operator.yaml
 - container-security-operator.yaml
 - web-terminal-operator.yaml
+- opendatahub-operator.yaml
 
 patchesJson6902:
 - target:
@@ -101,5 +102,13 @@ patchesJson6902:
     version: v1alpha1
     kind: Application
     name: web-terminal-operator
+    namespace: argocd
+  path: meta/patches/github-username-patch.yaml
+
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: opendatahub-operator
     namespace: argocd
   path: meta/patches/github-username-patch.yaml
