@@ -23,14 +23,14 @@ spec:
           name: manifests
           path: superset
       name: superset
-    - kustomizeConfig:
-        parameters:
-          - name: namespace
-            value: openshift-operators
-        repoRef:
-          name: manifests
-          path: kafka/cluster
-      name: strimzi-operator
+    #- kustomizeConfig:
+    #    parameters:
+    #      - name: namespace
+    #        value: openshift-operators
+    #    repoRef:
+    #      name: manifests
+    #      path: kafka/cluster
+    #  name: strimzi-operator
     - kustomizeConfig:
         repoRef:
           name: manifests
@@ -56,11 +56,11 @@ spec:
           name: manifests
           path: prometheus/cluster
       name: prometheus-cluster
-    - kustomizeConfig:
-        repoRef:
-          name: manifests
-          path: prometheus/operator
-      name: prometheus-operator
+    #- kustomizeConfig:
+    #    repoRef:
+    #      name: manifests
+    #      path: prometheus/operator
+    #  name: prometheus-operator
     - kustomizeConfig:
         parameters:
           - name: s3_endpoint_url
