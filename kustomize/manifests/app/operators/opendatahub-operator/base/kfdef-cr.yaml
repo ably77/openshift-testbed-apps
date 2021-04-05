@@ -88,6 +88,11 @@ spec:
     #      name: manifests
     #      path: prometheus/cluster
     #  name: prometheus-cluster
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: prometheus/operator
+      name: prometheus-operator
   repos:
     - name: kf-manifests
       uri: 'https://github.com/kubeflow/manifests/tarball/v1.2-branch'
