@@ -36,16 +36,16 @@ spec:
           name: manifests
           path: kafka/kafka
       name: kafka-cluster
-    #- kustomizeConfig:
-    #    repoRef:
-    #      name: manifests
-    #      path: grafana/cluster
-    #  name: grafana-cluster
-    #- kustomizeConfig:
-    #    repoRef:
-    #      name: manifests
-    #      path: grafana/grafana
-    #  name: grafana-instance
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: grafana/cluster
+      name: grafana-cluster
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: grafana/grafana
+      name: grafana-instance
     - kustomizeConfig:
         repoRef:
           name: manifests
@@ -56,11 +56,11 @@ spec:
           name: manifests
           path: prometheus/cluster
       name: prometheus-cluster
-    #- kustomizeConfig:
-    #    repoRef:
-    #      name: manifests
-    #      path: prometheus/operator
-    #  name: prometheus-operator
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: prometheus/operator
+      name: prometheus-operator
     - kustomizeConfig:
         parameters:
           - name: s3_endpoint_url
