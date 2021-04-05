@@ -1,6 +1,11 @@
+apiVersion: 1.0.0
 metadata:
-  name: openshift-testbed-devspace
+  name: quarkus-agd83
 projects:
+  - name: quarkus-quickstarts
+    source:
+      location: 'http://devfile-registry-codeready.apps.ly-demo.west.aws.redhat-demo.com/resources/quarkus-quarkus-quickstarts-master.zip'
+      type: zip
   - name: openshift-testbed
     source:
       location: 'https://github.com/ably77/openshift-testbed'
@@ -12,27 +17,54 @@ projects:
       type: git
       branch: master
 components:
-  - id: ms-vscode/go/latest
-    memoryLimit: 1024Mi
+  - id: redhat/quarkus-java11/latest
     type: chePlugin
-    alias: go-plugin
   - mountSources: true
     endpoints:
-      - name: 8080/tcp
+      - name: quarkus-development-server
+        port: 8080
+      - attributes:
+          path: /hello/greeting/che-user
+        name: hello-greeting-endpoint
         port: 8080
     memoryLimit: 512Mi
     type: dockerimage
-    alias: go-cli
-    image: 'registry.redhat.io/codeready-workspaces/stacks-golang-rhel8:2.0'
+    volumes:
+      - name: m2
+        containerPath: /home/jboss/.m2
+    alias: maven
+    image: 'registry.redhat.io/codeready-workspaces/plugin-java11-rhel8@sha256:b7419991847d4fd1659773c9f8043cb4904f9d028405fd7c1769ca8753887f77'
     env:
-      - value: '/go:$(CHE_PROJECTS_ROOT)'
-        name: GOPATH
-      - value: /tmp/.cache
-        name: GOCACHE
-  - id: ms-kubernetes-tools/vscode-kubernetes-tools/latest
-    type: chePlugin
-  - id: redhat/vscode-openshift-connector/latest
-    type: chePlugin
-  - id: redhat/vscode-yaml/latest
-    type: chePlugin
-apiVersion: 1.0.0
+      - value: '-XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom -Duser.home=/home/jboss'
+        name: JAVA_OPTS
+      - value: $(JAVA_OPTS)
+        name: MAVEN_OPTS
+commands:
+  - name: 1. Package the application
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/getting-started'
+        type: exec
+        command: mvn package
+        component: maven
+  - name: 2. Start Quarkus in devmode (hot deploy + debug)
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/getting-started'
+        type: exec
+        command: 'mvn compile quarkus:dev -Dquarkus.http.host=0.0.0.0'
+        component: maven
+  - name: Attach remote debugger
+    actions:
+      - referenceContent: |
+          {
+            "version": "0.2.0",
+            "configurations": [
+              {
+                "type": "java",
+                "request": "attach",
+                "name": "Attach to Remote Quarkus App",
+                "hostName": "localhost",
+                "port": 5005
+              }
+            ]
+          }
+        type: vscode-launch
