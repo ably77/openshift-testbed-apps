@@ -83,6 +83,11 @@ spec:
           name: manifests
           path: grafana/cluster
       name: grafana-cluster
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: prometheus/cluster
+      name: prometheus-cluster
   repos:
     - name: kf-manifests
       uri: 'https://github.com/kubeflow/manifests/tarball/v1.2-branch'
