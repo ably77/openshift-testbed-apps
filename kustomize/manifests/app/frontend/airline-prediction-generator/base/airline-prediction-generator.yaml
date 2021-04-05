@@ -15,3 +15,7 @@ spec:
       containers:
       - name: kafka-streams-workload-generator
         image: ably77/airlineprediction-generator:v1
+        resources:
+          limits: 
+            cpu: "0.5"
+
