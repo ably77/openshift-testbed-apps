@@ -2,5 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - subscription.yaml
-- kfctl_openshift.v1.2.0.yaml
+# uncomment if you want to deploy kubeflow components
+# note that this may clash with any existing deployment of istio in istio-system
+#- kfctl_openshift.v1.2.0.yaml
 - kfdef-cr.yaml
