@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - subscription.yaml
 - kfctl_openshift.v1.2.0.yaml
+- kfdef-cr.yaml

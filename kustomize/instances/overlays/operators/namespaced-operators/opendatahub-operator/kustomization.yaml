@@ -8,4 +8,5 @@ bases:
 - ../../../../../manifests/app/operators/opendatahub-operator/base
 
 resources:
-- namespace.yaml
+- kubeflow-namespace.yaml
+- odh-namespace.yaml
