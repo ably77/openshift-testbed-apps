@@ -13,7 +13,7 @@ spec:
     path: kustomize/instances/overlays/operators/namespaced-operators/opendatahub-operator
   destination:
     server: https://kubernetes.default.svc
-    namespace: odh
+    namespace: kubeflow
   syncPolicy:
     automated:
       prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
