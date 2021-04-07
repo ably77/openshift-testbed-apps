@@ -6,6 +6,7 @@ commonAnnotations:
 
 bases:
 - ../../../../../manifests/app/operators/opendatahub-operator/base
+- ../../../../../manifests/app/operators/opendatahub-operator/base/cr
 
 resources:
 - kubeflow-namespace.yaml
