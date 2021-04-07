@@ -5,4 +5,4 @@ resources:
 # uncomment if you want to deploy kubeflow components
 # note that this may clash with any existing deployment of istio in istio-system
 #- cr/kfctl_openshift.v1.2.0.yaml
-- cr/kfdef-cr.yaml
+- kfdef-cr.yaml
