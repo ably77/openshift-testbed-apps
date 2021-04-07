@@ -3,6 +3,8 @@ kind: KfDef
 metadata:
   name: opendatahub
   namespace: odh
+  annotations:
+    kfctl.kubeflow.io/force-delete: "true"
 spec:
   applications:
     - kustomizeConfig:

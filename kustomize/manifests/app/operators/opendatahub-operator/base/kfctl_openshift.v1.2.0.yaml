@@ -3,6 +3,8 @@ kind: KfDef
 metadata:
   name: kubeflow
   namespace: kubeflow
+  annotations:
+    kfctl.kubeflow.io/force-delete: "true"
 spec:
   applications:
 # This needs to be first to set up permissions
