@@ -1,11 +1,13 @@
 # openshift-testbed-apps
 
-## Apps
+### Frontend
 - airline-prediction-generator
 - airline-prediction-stream
 - book-info-app
 - iotdemo-app
 - kafka-loadtest-app
+
+## Backend Operators
 - amq-broker-operator
 - argocd-operator
 - codeready-workspaces-operator
