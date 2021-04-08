@@ -1,4 +1,30 @@
 # openshift-testbed-apps
+
+## Apps
+- airline-prediction-generator
+- airline-prediction-stream
+- book-info-app
+- iotdemo-app
+- kafka-loadtest-app
+- amq-broker-operator
+- argocd-operator
+- codeready-workspaces-operator
+- container-security-operator
+- elasticsearch-operator
+- integreatly-grafana-operator
+- jaeger-operator
+- kiali-operator
+- metering-operator
+- namespace-config-operator
+- node-feature-discovery-operator
+- opendatahub-operator
+- openshift-pipelines-operator
+- podium-operator
+- prometheus-operator
+- quay-operator
+- servicemesh-operator
+- strimzi-kafka-operator
+- web-terminal-operator
  
 ## GitOps Structure
 Following a GitOps folder structure suggested by the Red Hat Canada Cloud SA team which has excellent guidance for GitOps principles
