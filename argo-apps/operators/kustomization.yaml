@@ -13,7 +13,7 @@ resources:
 - podium-operator.yaml
 #- servicemesh-operator.yaml
 - container-security-operator.yaml
-- web-terminal-operator.yaml
+#- web-terminal-operator.yaml
 - opendatahub-operator.yaml
 
 patchesJson6902:
@@ -97,13 +97,13 @@ patchesJson6902:
     namespace: argocd
   path: meta/patches/github-username-patch.yaml
 
-- target:
-    group: argoproj.io
-    version: v1alpha1
-    kind: Application
-    name: web-terminal-operator
-    namespace: argocd
-  path: meta/patches/github-username-patch.yaml
+#- target:
+#    group: argoproj.io
+#    version: v1alpha1
+#    kind: Application
+#    name: web-terminal-operator
+#    namespace: argocd
+#  path: meta/patches/github-username-patch.yaml
 
 - target:
     group: argoproj.io
