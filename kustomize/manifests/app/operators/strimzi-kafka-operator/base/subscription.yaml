@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/strimzi-kafka-operator.myproject-dev: ''
 spec:
-  channel: strimzi-0.19.x
+  channel: stable
   installPlanApproval: Automatic
   name: strimzi-kafka-operator
   source: community-operators
