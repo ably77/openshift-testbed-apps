@@ -2,14 +2,4 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: myproject-dev
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: myproject-test
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: myproject-prod
 
